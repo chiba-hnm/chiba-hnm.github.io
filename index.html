@@ -1,3 +1,625 @@
 <html>
-   <p>Hello</p>
+    <h1>新年生履修相談会用</h1>
+    <form name="select_form">
+        <p>クラス：
+            <input type="radio" name="class1" id="classA" value="A"><label for="classA" class="radio">A</label>
+            <input type="radio" name="class1" id="classB" value="B"><label for="classB" class="radio">B</label>
+            <input type="radio" name="class1" id="classC" value="C"><label for="classC" class="radio">C</label>
+            <input type="radio" name="class1" id="classD" value="D"><label for="classD" class="radio">D</label>
+            <input type="radio" name="class1" id="classE" value="E"><label for="classE" class="radio">E</label>
+            <input type="radio" name="class1" id="classF" value="F"><label for="classF" class="radio">F</label>
+        </p>
+        <p>第二外国語：
+            <input type="radio" name="nigai" id="nigaiF" value="フランス語"><label for="nigaiF" class="radio">フランス</label>
+            <input type="radio" name="nigai" id="nigaiD" value="ドイツ語"><label for="nigaiD" class="radio">ドイツ</label>
+            <input type="radio" name="nigai" id="nigaiS" value="スペイン語"><label for="nigaiS" class="radio">スペイン</label>
+            <input type="radio" name="nigai" id="nigaiC" value="中国語"><label for="nigaiC" class="radio">中国</label>
+            <input type="radio" name="nigai" id="nigaiR" value="ロシア語"><label for="nigaiR" class="radio">ロシア</label>
+            <input type="radio" name="nigai" id="nigaiK" value="韓国語"><label for="nigaiK" class="radio">韓国</label>
+        </p>
+    </form>
+    <input class="button" type="button" value="決定" onclick="clickBtn()"/>
+    <input class="button" type="button" value="リセット" onclick="radioDeselection()"/>
+
+
+    <div id="example">
+        <h2>前期</h2>
+        <table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
+            <tr style="background-color:gray">
+                <td style="width:10%;"></td>
+                <td style="width:15%;">Mon</td>
+                <td style="width:15%;">Tue</td>
+                <td style="width:15%;">Wed</td>
+                <td style="width:15%;">Thu</td>
+                <td style="width:15%;">Fri</td>
+                <td style="width:15%;">Sat</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><span id="mon1Z"></span><span id="mon1Z_"></span></td>
+                <td><span id="tue1Z"></span><span id="tue1Z_"></span></td>
+                <td><span id="wed1Z"></span><span id="wed1Z_"></span></td>
+                <td><span id="thu1Z"></span><span id="thu1Z_"></span></td>
+                <td><span id="fri1Z"></span><span id="fri1Z_"></span></td>
+                <td><span id="sat1Z"></span><span id="sat1Z_"></span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><span id="mon2Z"></span><span id="mon2Z_"></span></td>
+                <td>コミュニケーション基礎</td>
+                <td><span id="wed2Z"></span><span id="wed2Z_"></span></td>
+                <td><span id="thu2Z"></span><span id="thu2Z_"></span></td>
+                <td><span id="fri2Z"></span><span id="fri2Z_"></span></td>
+                <td><span id="sat2Z"></span><span id="sat2Z_"></span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><span id="mon3Z"></span><span id="mon3Z_"></span></td>
+                <td><span id="tue3Z"></span><span id="tue3Z_"></span></td>
+                <td><span id="wed3Z"></span><span id="wed3Z_"></span></td>
+                <td><span id="thu3Z"></span><span id="thu3Z_"></span></td>
+                <td>情報科学概論</td>
+                <td><span id="sat3Z"></span><span id="sat3Z_"></span></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><span id="mon4Z"></span><span id="mon4Z_"></span></td>
+                <td>社会情報体験演習</td>
+                <td><span id="wed4Z"></span><span id="wed4Z_"></span></td>
+                <td><span id="thu4Z"></span><span id="thu4Z_"></span></td>
+                <td><span id="fri4Z"></span><span id="fri4Z_"></span</td>
+                <td><span id="sat4Z"></span><span id="sat4Z_"></span></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><span id="mon5Z"></span><span id="mon5Z_"></span></td>
+                <td>社会情報体験演習</td>
+                <td><span id="wed5Z"></span><span id="wed5Z_"></span></td>
+                <td><span id="thu5Z"></span><span id="thu5Z_"></span></td>
+                <td><span id="fri5Z"></span><span id="fri5Z_"></span></td>
+                <td><span id="sat5Z"></span><span id="sat5Z_"></span></td>
+            </tr>
+        </table>
+        <br>
+        <div id="_1">
+            <p>月1</p>
+        </div>
+        <div id="_2">
+            <p>月2</p>
+            <input type="radio" name="mon2Z" id="mon2Z社会数理入門Ⅰ" value="社会数理入門Ⅰ" onclick="clickSelect(name, value)"><label for="mon2Z社会数理入門Ⅰ" class="radio">社会数理入門Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0098&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <input type="radio" name="mon2Z" id="mon2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー" onclick="clickSelect(name, value)"><label for="mon2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー</label>
+            <input type="radio" name="mon2Z" id="mon2Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+        </div>
+        <div id="_3">
+            <p>月3</p>
+        </div>
+        <div id="_4">
+            <p>月4</p>
+            <input type="radio" name="mon4Z" id="mon4Z社会数理Ⅰ" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon4Z社会数理Ⅰ" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+        </div>
+        <div id="_5">
+            <p>月5</p>
+            <input type="radio" name="mon5Z" id="mon5Z社会数理Ⅰ" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon5Z社会数理Ⅰ" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+        </div>
+        <div id="_6">
+            <p>火1</p>
+            <input type="radio" name="tue1Z" id="tue1Zウェルカム・レクチャー" value="ウェルカム・レクチャー" onclick="clickSelect(name, value)"><label for="tue1Zウェルカム・レクチャー" class="radio">ウェルカム・レクチャー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0918&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d6b7b1a53445a51412451422d5a4f535f482f2d553441564c4753363a5c3f4859454d5ac1b1a7c6b7a0beb4adcbc8aec9beabb7a3b4d3d0b1d0a5b2a0abbfdadab8dbac859991869c9483e29b8c929889ec9d8af582978b8790f4f49ef2f3869afafc8e829ef2fef2f4f7f7faf9ec8c878ff3fefee0fce2e6f3929be5b3bbfdbfa9b2efd0c4d0d7a7b5aed6cddbde899883a58a9e82939881c8d3b2cedcbbcfd9c4bdda45362741302047352d3b4c58696c7c6c783741472933465025283c4b5f202f3970681f13" target="_blank">詳細</a>
+            <input type="radio" name="tue1Z" id="tue1Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="tue1Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0207&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d197b1a53445a50412455422d5a4f535f482f2e553441564c4753364a5c3f4859454d5ab8b6a7c6b7a0beb5adcbbcaec9beabb7a2b4d3a7b1d0a5b2a0aabfd9afb8dbac85999186e6e783e29b8c929989efec8af582978b87908ff19dfc899e848e9b8781e487f0e1fdf5e28a8aec8085f0e88892e0908ce4e8e0e6e9e9e8ebfa9a959dddd0ccd2cad4d4c1aca5d7818dcb8d9b9cc1c2d6c6c1b5a7b0c8dfc9c89f8a914b646c70656e733a2d4c3c2e4d392b365334572431572232592b3f295a4e7b7e52424a0577711b01786e171a0a7d6d120217627a0905" target="_blank">詳細</a>
+            <input type="radio" name="tue1Z" id="tue1Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue1Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue1Z" id="tue1Zremove" value="" onclick="clickSelect(name, value)"><label for="tue1Zremove" class="radio">取り消し</label>
+        </div>
+        <div id="_7">
+            <p>火2</p>
+
+        </div>
+        <div id="_8">
+            <p>火3</p>
+            <input type="radio" name="tue3Z" id="tue3Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue3Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue3Z" id="tue3Zremove" value="" onclick="clickSelect(name, value)"><label for="tue3Zremove" class="radio">取り消し</label>
+
+        </div>
+        <div id="_9">
+            <p>火4</p>
+
+        </div>
+        <div id="_10">
+            <p>火5</p>
+
+        </div>
+        <div id="_11">
+            <p>水1</p>
+
+        </div>
+        <div id="_12">
+            <p>水2</p>
+            <input type="radio" name="wed2Z" id="wed2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect('wed2Z', 'キャリアデザイン・セミナー[青山]')"><label for="wed2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー[青山]</label>
+        </div>
+        <div id="_13">
+            <p>水3</p>
+
+        </div>
+        <div id="_14">
+            <p>水4</p>
+
+        </div>
+        <div id="_15">
+            <p>水5</p>
+
+        </div>
+        <div id="_16">
+            <p>木1</p>
+            <input type="radio" name="thu1Z" id="thu1Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー" onclick="clickSelect('thu1Z', 'キャリアデザイン・セミナー')"><label for="thu1Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー</label>
+
+        </div>
+        <div id="_17">
+            <p>木2</p>
+            <input type="radio" name="thu2Z" id="thu2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー" onclick="clickSelect('thu2Z', 'キャリアデザイン・セミナー')"><label for="thu2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー</label>
+
+        </div>
+        <div id="_18">
+            <p>木3</p>
+
+        </div>
+        <div id="_19">
+            <p>木4</p>
+            <input type="radio" name="thu4Z" id="thu4Z数理情報Ⅰ" value="数理情報Ⅰ"><label for="thu4Z数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
+            
+        </div>
+        <div id="_20">
+            <p>木5</p>
+            <input type="radio" name="thu5Z" id="thu5Z数理情報Ⅰ" value="数理情報Ⅰ" onclick="clickSelect('thu5Z', '数理情報Ⅰ')"><label for="thu5Z数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
+        </div>
+        <div id="_21">
+            <p>金1</p>
+
+        </div>
+        <div id="_22">
+            <p>金2</p>
+
+        </div>
+        <div id="_23">
+            <p>金3</p>
+
+        </div>
+        <div id="_24">
+            <p>金4</p>
+        </div>
+        <div id="_25">
+            <p>金5</p>
+        </div>
+        <div id="_26">
+            <p>土1</p>
+
+        </div>
+        <div id="_27">
+            <p>土2</p>
+        </div>
+        <div id="_28">
+            <p>土3</p>
+        </div>
+        <div id="_29">
+            <p>土4</p>
+        </div>
+        <div id="_30">
+            <p>土5</p>
+        </div>        
+<br>
+
+<h2>後期</h2>
+<table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
+    <tr style="background-color:gray">
+        <td style="width:15%;">Mon</td>
+        <td style="width:15%;">Tue</td>
+        <td style="width:15%;">Wed</td>
+        <td style="width:15%;">Thu</td>
+        <td style="width:15%;">Fri</td>
+        <td style="width:15%;">Sat</td></tr>
+            <tr>
+        <td>1</td>
+        <td><span id="mon1K"></span><span id="mon1K_"></span></td>
+        <td><span id="tue1K"></span><span id="tue1K_"></span></td>
+        <td><span id="wed1K"></span><span id="wed1K_"></span></td>
+        <td><span id="thu1K"></span><span id="thu1K_"></span></td>
+        <td>コンピューティング実習</td>
+        <td><span id="sat1K"></span><span id="sat1K_"></span></td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td><span id="mon2K"></span><span id="mon2K_"></span></td>
+        <td><span id="tue2K"></span><span id="tue2K_"></span></td>
+        <td><span id="wed2K"></span><span id="wed2K_"></span></td>
+        <td><span id="thu2K"></span><span id="thu2K_"></span></td>
+        <td>コンピューティング実習</td>
+        <td><span id="sat2K"></span><span id="sat2K_"></span></td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>人間科学概論</td>
+        <td><span id="tue3K"></span><span id="tue3K_"></span></td>
+        <td><span id="wed3K"></span><span id="wed3K_"></span></td>
+        <td><span id="thu3K"></span><span id="thu3K_"></span></td>
+        <td>社会科学概論</td>
+        <td><span id="sat3K"></span><span id="sat3K_"></span></td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td><span id="mon4K"></span><span id="mon4K_"></span></td>
+        <td>統計入門</td>
+        <td><span id="wed4K"></span><span id="wed4K_"></span></td>
+        <td><span id="thu4K"></span><span id="thu4K_"></span></td>
+        <td><span id="fri4K"></span><span id="fri4K_"></span></td>
+        <td><span id="sat4K"></span><span id="sat4K_"></span></td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td><span id="mon5K"></span><span id="mon5K_"></span></td>
+        <td>統計入門</td>
+        <td><span id="wed5K"></span><span id="wed5K_"></span></td>
+        <td><span id="thu5K"></span><span id="thu5K_"></span></td>
+        <td><span id="fri5K"></span><span id="fri5K_"></span></td>
+        <td><span id="sat5K"></span><span id="sat5K_"></span></td>
+        </tr>
+        </table>
+        <br>
+        <div id="_31">
+            <p>月1</p>
+        </div>
+        <div id="_32">
+            <p>月2</p>
+            <input type="radio" name="mon2K" id="mon2K社会数理入門Ⅱ" value="社会数理入門Ⅱ" onclick="clickSelect('mon2K', '社会数理入門Ⅱ')"><label for="mon2K社会数理入門Ⅱ" class="radio">社会数理入門Ⅱ</label>
+        </div>
+        <div id="_33">
+            <p>月3</p>
+        </div>
+        <div id="_34">
+            <p>月4</p>
+            <input type="radio" name="mon4K" id="mon4K社会数理Ⅱ" value="社会数理Ⅱ" onclick="clickSelect('mon4K', '社会数理Ⅱ')"><label for="mon4K社会数理Ⅱ" class="radio">社会数理Ⅱ</label>
+        </div>
+        <div id="_35">
+            <p>月5</p>
+            <input type="radio" name="mon5K" id="mon5K社会数理Ⅱ" value="社会数理Ⅱ" onclick="clickSelect('mon5K', '社会数理Ⅱ')"><label for="mon5K社会数理Ⅱ" class="radio">社会数理Ⅱ</label>
+        </div>
+        <div id="_36">
+            <p>火1</p>
+            <input type="radio" name="tue1K" id="tue1Kremove" value="" onclick="clickSelect('tue1K', '')"><label for="tue1Kremove" class="radio">取り消し</label>
+        </div>
+        <div id="_37">
+            <p>火2</p>
+
+        </div>
+        <div id="_38">
+            <p>火3</p>
+
+        </div>
+        <div id="_39">
+            <p>火4</p>
+
+        </div>
+        <div id="_40">
+            <p>火5</p>
+
+        </div>
+        <div id="_41">
+            <p>水1</p>
+
+        </div>
+        <div id="_42">
+            <p>水2</p>
+        </div>
+        <div id="_43">
+            <p>水3</p>
+
+        </div>
+        <div id="_44">
+            <p>水4</p>
+
+        </div>
+        <div id="_45">
+            <p>水5</p>
+
+        </div>
+        <div id="_46">
+            <p>木1</p>
+
+        </div>
+        <div id="_47">
+            <p>木2</p>
+
+        </div>
+        <div id="_48">
+            <p>木3</p>
+
+        </div>
+        <div id="_49">
+            <p>木4</p>
+            <input type="radio" name="thu4K" id="thu4K数理情報Ⅰ" value="数理情報Ⅰ" onclick="clickSelect('thu4K', '数理情報Ⅰ')"><label for="thu4K数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
+            
+        </div>
+        <div id="_50">
+            <p>木5</p>
+            <input type="radio" name="thu5K" id="thu5K数理情報Ⅰ" value="数理情報Ⅰ" onclick="clickSelect('thu5K', '数理情報Ⅰ')"><label for="thu5K数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
+        </div>
+        <div id="_51">
+            <p>金1</p>
+
+        </div>
+        <div id="_52">
+            <p>金2</p>
+
+        </div>
+        <div id="_53">
+            <p>金3</p>
+
+        </div>
+        <div id="_54">
+            <p>金4</p>
+        </div>
+        <div id="_55">
+            <p>金5</p>
+        </div>
+        <div id="_56">
+            <p>土1</p>
+
+        </div>
+        <div id="_57">
+            <p>土2</p>
+        </div>
+        <div id="_58">
+            <p>土3</p>
+        </div>
+        <div id="_59">
+            <p>土4</p>
+        </div>
+        <div id="_60">
+            <p>土5</p>
+        </div>        
+
+    <h3>他：</h3><p>情報スキル</p>
+
+    <p>計：26単位</p>
+    </div>
+    
+<div id="table"></div>
+<style>
+html {
+  margin:50px;
+}
+p {
+  font-size:20px;
+}
+.button {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+.button:hover {
+  background-color: #9ec34b;
+  border-color: #cbe585;
+  color: #FFF;
+}
+table td {
+  border: 1px #000000 solid;
+  height: 50px;
+}
+
+input[type=radio] {
+  display: none;
+}
+.radio {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  margin: 0 20px 8px 0;
+  padding: 12px 12px 12px 42px;
+  border-radius: 8px;
+  background-color: #f6f7f8;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.radio:hover {
+  background-color: #e2edd7;
+}
+.radio:hover:after {
+  border-color: #53b300;
+}
+.radio:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  content: '';
+}
+.radio:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  display: block;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #53b300;
+  content: '';
+  opacity: 0;
+}
+input[type=radio]:checked + .radio:before {
+  opacity: 1;
+}
+
+</style>
 </html>
+
+
+<script>
+function radioDeselection() {
+  for (const element of document.getElementsByName('class1')) {
+    element.checked = false;
+  }
+  for (const element of document.getElementsByName('nigai')) {
+    element.checked = false;
+  }
+
+}
+function clickSelect(id, name){
+    document.getElementById(id + "_").textContent = name;
+    // document.getElementById(id).innerHTML = "<input type='button' value='' onclick='hyoji(25)'>";
+    hide()
+}
+
+function clickBtn(){
+    document.getElementById("example").style.display="block";
+
+	let selectClass = "";
+    let selectNigai = "";
+	const class1 = document.select_form.class1;
+	const nigai = document.select_form.nigai;
+
+	for (let i = 0; i < class1.length; i++){
+		if(class1[i].checked){ //(color1[i].checked === true)と同じ
+			selectClass = class1[i].value;
+			break;
+		}
+	}
+    for (let i = 0; i < nigai.length; i++){
+		if(nigai[i].checked){ //(color1[i].checked === true)と同じ
+			selectNigai = nigai[i].value;
+			break;
+		}
+	}
+    if(selectNigai == "韓国語" || selectNigai == "ロシア語") {
+        document.getElementById("sat1Z").textContent = selectNigai + 'Ⅰ(A)-1';
+        document.getElementById("sat2Z").textContent = selectNigai + 'Ⅰ(B)-1';
+        document.getElementById("sat1K").textContent = selectNigai + 'Ⅰ(A)-2';
+        document.getElementById("sat2K").textContent = selectNigai + 'Ⅰ(B)-2';
+        document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
+        document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
+        document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
+        document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
+    }else {
+        document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
+        document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
+        document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
+        document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
+        document.getElementById("tue3Z").textContent = selectNigai + 'Ⅰ(A)-1';
+        document.getElementById("thu3Z").textContent = selectNigai + 'Ⅰ(B)-1';
+        document.getElementById("tue3K").textContent = selectNigai + 'Ⅰ(A)-2';
+        document.getElementById("thu3K").textContent = selectNigai + 'Ⅰ(B)-2';
+    }
+    if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
+        document.getElementById("mon4Z").textContent = "English";
+        document.getElementById("thu5Z").textContent = "English";
+        document.getElementById("mon4K").textContent = "English";
+        document.getElementById("thu5K").textContent = "English";
+        document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
+        document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
+        // document.getElementById("mon5K").innerHTML = '<a href="https://www.google.com">_</a>';
+        // document.getElementById("thu4K").innerHTML = '<a href="https://www.google.com">_</a>';
+    } else {
+        document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
+        document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
+        // document.getElementById("mon4K").innerHTML = '<a href="https://www.google.com">_</a>';
+        // document.getElementById("thu5K").innerHTML = '<a href="https://www.google.com">_</a>';
+        document.getElementById("mon5Z").textContent = "English";
+        document.getElementById("thu4Z").textContent = "English";
+        document.getElementById("mon5K").textContent = "English";
+        document.getElementById("thu4K").textContent = "English";
+    }
+}
+function hide() {
+    for (let i = 1; i < 61; i++) {
+      document.getElementById("_" + i).style.display="none";
+    }
+}
+
+function hyoji(num)
+{
+    hide()
+    document.getElementById("_" + num).style.display="block";
+  
+}
+window.onload = function() {
+    document.getElementById("example").style.display="none";
+    hide()
+    document.getElementById("mon1Z").innerHTML = "<input type='button' value='' onclick='hyoji(1)'>";
+    document.getElementById("mon2Z").innerHTML = "<input type='button' value='' onclick='hyoji(2)'>";
+    document.getElementById("mon3Z").innerHTML = "<input type='button' value='' onclick='hyoji(3)'>";
+    document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
+    document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
+    document.getElementById("tue1Z").innerHTML = "<input type='button' value='' onclick='hyoji(6)'>";
+    // document.getElementById("tue2Z").innerHTML = "<input type='button' value='' onclick='hyoji(7)'>";
+    document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
+    // document.getElementById("tue4Z").innerHTML = "<input type='button' value='' onclick='hyoji(9)'>";
+    // document.getElementById("tue5Z").innerHTML = "<input type='button' value='' onclick='hyoji(10)'>";
+    document.getElementById("wed1Z").innerHTML = "<input type='button' value='' onclick='hyoji(11)'>";
+    document.getElementById("wed2Z").innerHTML = "<input type='button' value='' onclick='hyoji(12)'>";
+    document.getElementById("wed3Z").innerHTML = "<input type='button' value='' onclick='hyoji(13)'>";
+    document.getElementById("wed4Z").innerHTML = "<input type='button' value='' onclick='hyoji(14)'>";
+    document.getElementById("wed5Z").innerHTML = "<input type='button' value='' onclick='hyoji(15)'>";
+    document.getElementById("thu1Z").innerHTML = "<input type='button' value='' onclick='hyoji(16)'>";
+    document.getElementById("thu2Z").innerHTML = "<input type='button' value='' onclick='hyoji(17)'>";
+    document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
+    document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
+    document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
+    document.getElementById("fri1Z").innerHTML = "<input type='button' value='' onclick='hyoji(21)'>";
+    document.getElementById("fri2Z").innerHTML = "<input type='button' value='' onclick='hyoji(22)'>";
+    // document.getElementById("fri3Z").innerHTML = "<input type='button' value='' onclick='hyoji(23)'>";
+    document.getElementById("fri4Z").innerHTML = "<input type='button' value='' onclick='hyoji(24)'>";
+    document.getElementById("fri5Z").innerHTML = "<input type='button' value='' onclick='hyoji(25)'>";
+    document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
+    document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
+    document.getElementById("sat3Z").innerHTML = "<input type='button' value='' onclick='hyoji(28)'>";
+    document.getElementById("sat4Z").innerHTML = "<input type='button' value='' onclick='hyoji(29)'>";
+    document.getElementById("sat5Z").innerHTML = "<input type='button' value='' onclick='hyoji(30)'>";
+
+    document.getElementById("mon1K").innerHTML = "<input type='button' value='' onclick='hyoji(31)'>";
+    document.getElementById("mon2K").innerHTML = "<input type='button' value='' onclick='hyoji(32)'>";
+    // document.getElementById("mon3K").innerHTML = "<input type='button' value='' onclick='hyoji(33)'>";
+    document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
+    document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
+    document.getElementById("tue1K").innerHTML = "<input type='button' value='' onclick='hyoji(36)'>";
+    document.getElementById("tue2K").innerHTML = "<input type='button' value='' onclick='hyoji(37)'>";
+    document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
+    // document.getElementById("tue4K").innerHTML = "<input type='button' value='' onclick='hyoji(39)'>";
+    // document.getElementById("tue5K").innerHTML = "<input type='button' value='' onclick='hyoji(40)'>";
+    document.getElementById("wed1K").innerHTML = "<input type='button' value='' onclick='hyoji(41)'>";
+    document.getElementById("wed2K").innerHTML = "<input type='button' value='' onclick='hyoji(42)'>";
+    document.getElementById("wed3K").innerHTML = "<input type='button' value='' onclick='hyoji(43)'>";
+    document.getElementById("wed4K").innerHTML = "<input type='button' value='' onclick='hyoji(44)'>";
+    document.getElementById("wed5K").innerHTML = "<input type='button' value='' onclick='hyoji(45)'>";
+    document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
+    document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
+    document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
+    document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
+    document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
+    // document.getElementById("fri1K").innerHTML = "<input type='button' value='' onclick='hyoji(51)'>";
+    // document.getElementById("fri2K").innerHTML = "<input type='button' value='' onclick='hyoji(52)'>";
+    // document.getElementById("fri3K").innerHTML = "<input type='button' value='' onclick='hyoji(53)'>";
+    document.getElementById("fri4K").innerHTML = "<input type='button' value='' onclick='hyoji(54)'>";
+    document.getElementById("fri5K").innerHTML = "<input type='button' value='' onclick='hyoji(55)'>";
+    document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
+    document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
+    document.getElementById("sat3K").innerHTML = "<input type='button' value='' onclick='hyoji(58)'>";
+    document.getElementById("sat4K").innerHTML = "<input type='button' value='' onclick='hyoji(59)'>";
+    document.getElementById("sat5K").innerHTML = "<input type='button' value='' onclick='hyoji(60)'>";
+
+}
+</script>
