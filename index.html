@@ -32,7 +32,6 @@
     <input class="button" type="button" value="決定" onclick="clickBtn()"/>
     <input class="button" type="button" value="リセット" onclick="radioDeselection()"/>
 
-
     <div id="time_table">
         <h2>前期</h2>
         <table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
@@ -1109,9 +1108,11 @@
         document.getElementById("time_table").style.display="none";
         for (const element of document.getElementsByName('select_class')) {
             element.checked = false;
+            element.disabled = false;
         }
         for (const element of document.getElementsByName('select_nigai')) {
             element.checked = false;
+            element.disabled = false;
         }
         resetClass()
     }
@@ -1140,6 +1141,12 @@
         resetCheck ()
         document.getElementById("tanni").textContent = 24;
         document.getElementById("time_table").style.display="block";
+        for (const element of document.getElementsByName('select_class')) {
+            element.disabled = true;
+        }
+        for (const element of document.getElementsByName('select_nigai')) {
+            element.disabled = true;
+        }
 
         let selectClass = "";
         let selectNigai = "";
