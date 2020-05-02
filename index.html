@@ -1139,15 +1139,6 @@
 
     function clickBtn(){
         resetCheck ()
-        document.getElementById("tanni").textContent = 26;
-        document.getElementById("time_table").style.display="block";
-        for (const element of document.getElementsByName('select_class')) {
-            element.disabled = true;
-        }
-        for (const element of document.getElementsByName('select_nigai')) {
-            element.disabled = true;
-        }
-
         let selectClass = "";
         let selectNigai = "";
         const select_class = document.select_form.select_class;
@@ -1165,6 +1156,18 @@
                 break;
             }
         }
+
+        if (selectClass != "" && selectNigai != "") {
+            document.getElementById("tanni").textContent = 26;
+            document.getElementById("time_table").style.display="block";
+            for (const element of document.getElementsByName('select_class')) {
+                element.disabled = true;
+            }
+            for (const element of document.getElementsByName('select_nigai')) {
+                element.disabled = true;
+            }
+        }
+
         if(selectNigai == "韓国語" || selectNigai == "ロシア語") {
             document.getElementById("sat1Z").textContent = selectNigai + 'Ⅰ(A)-1';
             document.getElementById("sat2Z").textContent = selectNigai + 'Ⅰ(B)-1';
