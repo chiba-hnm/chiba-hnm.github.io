@@ -1,5 +1,16 @@
 <html>
+    <div>
     <h1>新年生履修相談会用</h1>
+    <div class="list39">
+        <div class="list39-title">資料</div>
+        <ul>
+            <li><a href="https://cdn.aoyama.ac.2xx.jp/wp-content/uploads/2020/03/2020%E6%8E%88%E6%A5%AD%E8%A6%81%E8%A6%A7-%E7%A4%BE%E4%BC%9A%E6%83%85%E5%A0%B1%E5%AD%A6%E9%83%A8.pdf" target="_blank">授業要覧</a></li>
+            <li><a href="https://aguinfo.jm.aoyama.ac.jp/AGUInfo/web_a_gakumu/aosta/aosta_annai_1nen_2020S.pdf" target="_blank">青山スタンダード履修案内</a></li>
+            <li><a href="http://syllabus.aoyama.ac.jp/" target="_blank">講義内容検索</a></li>
+            <li><a href="http://jikanwari.azurewebsites.net/jikanwari/S680.pdf" target="_blank">授業時間割表</a></li>
+        </ul>
+    </div>
+    <br><br>
     <form name="select_form">
         <p>クラス：
             <input type="radio" name="select_class" id="classA" value="A"><label for="classA" class="radio">A</label>
@@ -544,7 +555,94 @@ input[type=radio] {
 input[type=radio]:checked + .radio:before {
   opacity: 1;
 }
+.list39 {
+  width:50%;
+  position: relative;
+  margin: 3em 0 1em 0;
+  background: #fff6e6;
+  box-shadow: 0 2px 3px rgba(0,0,0,.22);
+}
+.list39-title {
+  font-size: 20px;
+  padding: 4px 0 4px 16px;
+  color: #ee8992;
+  font-weight:bold;
+}
+.list39:after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 30%;
+  height: 35px;
+  opacity: 0.8;
+  margin: -35px auto 10px 35%;
+  background-color: #ffeaea;
+  background-image:
+  linear-gradient(-45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%),
+  linear-gradient(45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%);
+  background-size: 35px 35px;
+  transform: rotate(-2deg);
+  left: 10px;
+  right: 10px;
+}
+.list39 ul,.list39 ol  {
+  position: relative;
+  margin: 0;
+  padding: 0 0.5em 0 0.5em;
+  color: #ee8992;
+  border: none;
+  list-style-type: none;
+}
+.list39 ol {
+  counter-reset: number;
+}
+.list39 ul li,.list39 ol li {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.6em;
+  border-bottom: dashed 1px #ee8992;
+}
+.list39 ul li:before {
+  position: absolute;
+ font-family: FontAwesome;
+  content: "\f14a";
+  left : 0.7em;
+  color: #ee8992;
+}
+.list39 ol li:before {
+  display: inline-block;
+  position: absolute;
+  font-family: "Quicksand", sans-serif;
+  content: counter(number);
+  counter-increment: number;
+  left: 0.5em;
+  width: 22px;
+  height: 22px;
+  border-radius: 20%;
+  background: #ee8992;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 22px;
+}
+.list39 ul li:last-of-type,.list39 ol li:last-of-type{
+  border-bottom: none;
+}
+a{
+  padding: 0 10px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 226, 152) 50%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  transition: .3s;
+  text-decoration: none;
+  color:black;
+}
 
+a:hover{
+  background-position: -100% 0;
+  color: #fff;
+}
 </style>
 
 </html>
