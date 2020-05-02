@@ -1134,12 +1134,12 @@
                 plustanni += Number(eval(day[k] + i + "K__"))
             }
         }
-        document.getElementById("tanni").textContent = 24 + plustanni
+        document.getElementById("tanni").textContent = 26 + plustanni
     }
 
     function clickBtn(){
         resetCheck ()
-        document.getElementById("tanni").textContent = 24;
+        document.getElementById("tanni").textContent = 26;
         document.getElementById("time_table").style.display="block";
         for (const element of document.getElementsByName('select_class')) {
             element.disabled = true;
@@ -1185,6 +1185,9 @@
             document.getElementById("thu3K").textContent = selectNigai + 'Ⅰ(B)-2';
         }
         if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
+            document.getElementById("thu1K").textContent = "キリスト教概論Ⅰ";
+            document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
+
             document.getElementById("mon4Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("thu5Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("mon4K").textContent = "Integrated EnglishⅡ";
@@ -1194,6 +1197,8 @@
             document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
             document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
         } else {
+            document.getElementById("thu2K").textContent = "キリスト教概論Ⅰ";
+            document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
             document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
             document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
             document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
