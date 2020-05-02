@@ -2,27 +2,27 @@
     <h1>新年生履修相談会用</h1>
     <form name="select_form">
         <p>クラス：
-            <input type="radio" name="class1" id="classA" value="A"><label for="classA" class="radio">A</label>
-            <input type="radio" name="class1" id="classB" value="B"><label for="classB" class="radio">B</label>
-            <input type="radio" name="class1" id="classC" value="C"><label for="classC" class="radio">C</label>
-            <input type="radio" name="class1" id="classD" value="D"><label for="classD" class="radio">D</label>
-            <input type="radio" name="class1" id="classE" value="E"><label for="classE" class="radio">E</label>
-            <input type="radio" name="class1" id="classF" value="F"><label for="classF" class="radio">F</label>
+            <input type="radio" name="select_class" id="classA" value="A"><label for="classA" class="radio">A</label>
+            <input type="radio" name="select_class" id="classB" value="B"><label for="classB" class="radio">B</label>
+            <input type="radio" name="select_class" id="classC" value="C"><label for="classC" class="radio">C</label>
+            <input type="radio" name="select_class" id="classD" value="D"><label for="classD" class="radio">D</label>
+            <input type="radio" name="select_class" id="classE" value="E"><label for="classE" class="radio">E</label>
+            <input type="radio" name="select_class" id="classF" value="F"><label for="classF" class="radio">F</label>
         </p>
         <p>第二外国語：
-            <input type="radio" name="nigai" id="nigaiF" value="フランス語"><label for="nigaiF" class="radio">フランス</label>
-            <input type="radio" name="nigai" id="nigaiD" value="ドイツ語"><label for="nigaiD" class="radio">ドイツ</label>
-            <input type="radio" name="nigai" id="nigaiS" value="スペイン語"><label for="nigaiS" class="radio">スペイン</label>
-            <input type="radio" name="nigai" id="nigaiC" value="中国語"><label for="nigaiC" class="radio">中国</label>
-            <input type="radio" name="nigai" id="nigaiR" value="ロシア語"><label for="nigaiR" class="radio">ロシア</label>
-            <input type="radio" name="nigai" id="nigaiK" value="韓国語"><label for="nigaiK" class="radio">韓国</label>
+            <input type="radio" name="select_nigai" id="nigaiF" value="フランス語"><label for="nigaiF" class="radio">フランス</label>
+            <input type="radio" name="select_nigai" id="nigaiD" value="ドイツ語"><label for="nigaiD" class="radio">ドイツ</label>
+            <input type="radio" name="select_nigai" id="nigaiS" value="スペイン語"><label for="nigaiS" class="radio">スペイン</label>
+            <input type="radio" name="select_nigai" id="nigaiC" value="中国語"><label for="nigaiC" class="radio">中国</label>
+            <input type="radio" name="select_nigai" id="nigaiR" value="ロシア語"><label for="nigaiR" class="radio">ロシア</label>
+            <input type="radio" name="select_nigai" id="nigaiK" value="韓国語"><label for="nigaiK" class="radio">韓国</label>
         </p>
     </form>
     <input class="button" type="button" value="決定" onclick="clickBtn()"/>
     <input class="button" type="button" value="リセット" onclick="radioDeselection()"/>
 
 
-    <div id="example">
+    <div id="time_table">
         <h2>前期</h2>
         <table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
             <tr style="background-color:gray">
@@ -75,7 +75,7 @@
                 <td><span id="mon5Z"></span><span id="mon5Z_"></span></td>
                 <td>社会情報体験演習</td>
                 <td><span id="wed5Z"></span><span id="wed5Z_"></span></td>
-                <td><span id="thu5Z"></span><span id="thu5Z_"></span></td>
+                <td><span id="thu5Z"></spΩan><span id="thu5Z_"></span></td>
                 <td><span id="fri5Z"></span><span id="fri5Z_"></span></td>
                 <td><span id="sat5Z"></span><span id="sat5Z_"></span></td>
             </tr>
@@ -83,29 +83,97 @@
         <br>
         <div id="_1">
             <p>月1</p>
+            <input type="radio" name="mon1Z" id="mon1ZA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon1ZA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0001&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabeded8aadec2aea296909393969580e0e3eb979a829c809e8297f6ff89dfd791dbcdd68b8c988c8b83918af2e1f7f2a5bca781aea2beafa4a5ecf796e2f097e3fde099fe99eafb9dd4c4a3d1c1d7a0b48d88988884cbbdbbcdd7a2b4c9c6d0a7bbc4c9ddacb4c3cd" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1ZB" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1ZC" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1ZD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1ZE" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZF" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1ZF" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1ZG" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon1ZG" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1Zremove" value="" onclick="clickSelect(name, value)"><label for="mon1Zremove" class="radio">取り消し</label>
         </div>
         <div id="_2">
             <p>月2</p>
-            <input type="radio" name="mon2Z" id="mon2Z社会数理入門Ⅰ" value="社会数理入門Ⅰ" onclick="clickSelect(name, value)"><label for="mon2Z社会数理入門Ⅰ" class="radio">社会数理入門Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0098&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
-            <input type="radio" name="mon2Z" id="mon2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー" onclick="clickSelect(name, value)"><label for="mon2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー</label>
-            <input type="radio" name="mon2Z" id="mon2Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="mon2Z" id="mon2ZA" value="社会数理入門Ⅰ" onclick="clickSelect(name, value)"><label for="mon2ZA" class="radio">社会数理入門Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0098&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon2Z" id="mon2ZB" value="キャリアデザイン・セミナー" onclick="clickSelect(name, value)"><label for="mon2ZB" class="radio">キャリアデザイン・セミナー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0193&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d197b1a53445a50412455422d5a4f535f482f2e553441564c4753364a5c3f4859454d5ab8b6a7c6b7a0beb5adcbbcaec9beabb7a2b4d3a7b1d0a5b2a0aabfd9afb8dbac85999186e6e783e29b8c929989efec8af582978b87908ff19dfc899e848e9b8781e487f0e1fdf5e28a8aec8085f0e89692e0efbcbaf39195e99b85ebe1ebefeed0d3d2c5a3aea4dad9c7dbc5dddfc8abbccc9892d296829bc8c9dfc9c8beaeb7312430376671684c6d67796a6778332a5527375220302f543d5c2d3e5e293b5e12041065774047554b410c787810087f770c011564760b061e6973060c" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon2Z" id="mon2ZC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="mon2ZC" class="radio">フレッシャーズ・セミナー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0904&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b1d0a5b2a0aabfd9deb8dbac85999086e6e783e29b8c92988994e88af582978b87908ef69dfc899e848e9bfd83e7898af9e39f85f9f4a5a5ea8a8cfe928ee2eee2e4e7e7eae9fc9c979fe3eeced0ccd2d6c3a2abd5838bcd8f9982dfc0d4c0c7b7a5bec6ddcbce998893b59a6e726368713823423e2c4b3f29344d2a55263751203057253d2b5c48797c6c7c4807717719037660151a0c7b6f101f0960780f03" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon2Z" id="mon2ZD" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon2ZD" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon2Z" id="mon2ZE" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2ZE" class="radio">自己理解(個別科目)[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1093&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e6970136f7d616d7e1d1c7b1a55442054412757422d5e4f525c48565955344a56354253364b5f3132415b273db1bcededa2c2c4b6cad6bab6babcbfbfa2a1b4d4dfd7aba6b6a8b4aaaebbdad39dcbc385c7d1ca97988c989feffde69e958386d1c0dbfdd2d6cadbd0c9809bfaf6e483f7e1fc85e28dfeef89f8e88ffdf5e39480b1b4a4b4b0ff898fe1fb8e98ddd2c4b3a7d8d7c1b8a0d7db" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon2Z" id="mon2ZF" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2ZF" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0025&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d611c7e1e187b1a54442021412455422d5e4f2a58482c2a553446563636534e395c3f4859454f5ac1c4a4c8cdb8a0decab8b7e4e2abc9cda1d3cda3a9a3a7a6a8abaabddbd6dca2918f938d959780e3e494c0ca8acedac38081978180f6e6ff899c888fdec9d0f4a5afb1a2afb0fbe28dffef8af8e8f78cf594e5f696e1f396eafce89d8fb8bfad8389c4b0b0d8c0b7afd4d9cdbcaed3ded6a1bbcec4" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon1Zremove" value="" onclick="clickSelect(name, value)"><label for="mon1Zremove" class="radio">取り消し</label>
         </div>
         <div id="_3">
             <p>月3</p>
+            <input type="radio" name="mon3Z" id="mon3ZA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon3ZA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0064&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZB" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="mon3ZB" class="radio">フレッシャーズ・セミナー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0908&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="mon3ZCC" class="radio">フレッシャーズ・セミナー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0909&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon3ZD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon3ZE" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZF" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon3ZF" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon1Z" id="mon3ZG" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon3ZG" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZH" value="現代社会の諸問題(総合科目)" onclick="clickSelect(name, value)"><label for="mon3ZH" class="radio">現代社会の諸問題(総合科目)</label>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3ZI" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon3ZI" class="radio">科学・技術の視点(個別科目)[青山]</label>
+            <br>
+            <input type="radio" name="mon3Z" id="mon3Zremove" value="" onclick="clickSelect(name, value)"><label for="mon3Zremove" class="radio">取り消し</label>
         </div>
         <div id="_4">
             <p>月4</p>
-            <input type="radio" name="mon4Z" id="mon4Z社会数理Ⅰ" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon4Z社会数理Ⅰ" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <input type="radio" name="mon4Z" id="mon4ZA" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon4ZA" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon4Z" id="mon4ZB" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon4ZB" class="radio">フレッシャーズ・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1007&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon4Z" id="mon4ZC" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon4ZC" class="radio">フレッシャーズ・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1349&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon4Z" id="mon4ZD" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="mon4ZD" class="radio">フレッシャーズ・セミナー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0916&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon4Z" id="mon4ZE" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon4ZE" class="radio">科学・技術の視点(個別科目)[青山]</label>
+            <input type="radio" name="mon4Z" id="mon4Zremove" value="" onclick="clickSelect(name, value)"><label for="mon4Zremove" class="radio">取り消し</label>
         </div>
         <div id="_5">
             <p>月5</p>
-            <input type="radio" name="mon5Z" id="mon5Z社会数理Ⅰ" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon5Z社会数理Ⅰ" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <input type="radio" name="mon5Z" id="mon5ZA" value="社会数理Ⅰ" onclick="clickSelect(name, value)"><label for="mon5ZA" class="radio">社会数理Ⅰ</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0115&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013607d186e7e1e187b1a54442020415c27422d5f4f5259482c5f553445564d45534f4e5f3132415b393db1c3ddb3b9b3b7b6b0b8baadcbc6ccb2a1bfa3bda5a7b0d3d4a4f0fabafeeaf39091879190e6f6ef998c989fced9c0e4d5dfc1d2dfc08b92fd8f9ffa889887fce584f5e686f1e386faecf88d9fa8afbdb3b9f48080e8f0879fe4ebfd8c9ee3efc6b1abded4" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon5Z" id="mon5ZB" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon5ZB" class="radio">フレッシャーズ・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0162&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61697e65687b1a53445a50412425422d5a4f535f48565c553441564c4753354f5c3f4859454d5ac1b2a7c6b7a0beb4adcbc9aec9beabb7a2b4d0d2b2dedfaabec0d8aaa1f2f0b9f9e3949ecbcb80e0ea98e8f49c90989e8181808392f2fdf58588948a928c8c99848dffa9a5e3a5b3a4f9faeefef98d9f98e0f7e1e0b7a2b993bcb4a8bdb6abe2c5a4d4c6a5d1c3deabccafdcc9afdacab1c3d7c1b2a693968a9a92ddafa9c3d950463f302255453a392f5a42313d" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="mon5Z" id="mon5ZC" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon5ZC" class="radio">科学・技術の視点(個別科目)[青山]</label>
+            <input type="radio" name="mon5Z" id="mon5Zremove" value="" onclick="clickSelect(name, value)"><label for="mon5Zremove" class="radio">取り消し</label>
         </div>
         <div id="_6">
             <p>火1</p>
-            <input type="radio" name="tue1Z" id="tue1Zウェルカム・レクチャー" value="ウェルカム・レクチャー" onclick="clickSelect(name, value)"><label for="tue1Zウェルカム・レクチャー" class="radio">ウェルカム・レクチャー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0918&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d6b7b1a53445a51412451422d5a4f535f482f2d553441564c4753363a5c3f4859454d5ac1b1a7c6b7a0beb4adcbc8aec9beabb7a3b4d3d0b1d0a5b2a0abbfdadab8dbac859991869c9483e29b8c929889ec9d8af582978b8790f4f49ef2f3869afafc8e829ef2fef2f4f7f7faf9ec8c878ff3fefee0fce2e6f3929be5b3bbfdbfa9b2efd0c4d0d7a7b5aed6cddbde899883a58a9e82939881c8d3b2cedcbbcfd9c4bdda45362741302047352d3b4c58696c7c6c783741472933465025283c4b5f202f3970681f13" target="_blank">詳細</a>
-            <input type="radio" name="tue1Z" id="tue1Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="tue1Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0207&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d197b1a53445a50412455422d5a4f535f482f2e553441564c4753364a5c3f4859454d5ab8b6a7c6b7a0beb5adcbbcaec9beabb7a2b4d3a7b1d0a5b2a0aabfd9afb8dbac85999186e6e783e29b8c929989efec8af582978b87908ff19dfc899e848e9b8781e487f0e1fdf5e28a8aec8085f0e88892e0908ce4e8e0e6e9e9e8ebfa9a959dddd0ccd2cad4d4c1aca5d7818dcb8d9b9cc1c2d6c6c1b5a7b0c8dfc9c89f8a914b646c70656e733a2d4c3c2e4d392b365334572431572232592b3f295a4e7b7e52424a0577711b01786e171a0a7d6d120217627a0905" target="_blank">詳細</a>
-            <input type="radio" name="tue1Z" id="tue1Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue1Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue1Z" id="tue1ZA" value="ウェルカム・レクチャー" onclick="clickSelect(name, value)"><label for="tue1ZA" class="radio">ウェルカム・レクチャー</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611020-0918&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d6b7b1a53445a51412451422d5a4f535f482f2d553441564c4753363a5c3f4859454d5ac1b1a7c6b7a0beb4adcbc8aec9beabb7a3b4d3d0b1d0a5b2a0abbfdadab8dbac859991869c9483e29b8c929889ec9d8af582978b8790f4f49ef2f3869afafc8e829ef2fef2f4f7f7faf9ec8c878ff3fefee0fce2e6f3929be5b3bbfdbfa9b2efd0c4d0d7a7b5aed6cddbde899883a58a9e82939881c8d3b2cedcbbcfd9c4bdda45362741302047352d3b4c58696c7c6c783741472933465025283c4b5f202f3970681f13" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue1Z" id="tue1ZB" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="tue1ZB" class="radio">キャリアデザイン・セミナー[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0207&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013647d61687e1d197b1a53445a50412455422d5a4f535f482f2e553441564c4753364a5c3f4859454d5ab8b6a7c6b7a0beb5adcbbcaec9beabb7a2b4d3a7b1d0a5b2a0aabfd9afb8dbac85999186e6e783e29b8c929989efec8af582978b87908ff19dfc899e848e9b8781e487f0e1fdf5e28a8aec8085f0e88892e0908ce4e8e0e6e9e9e8ebfa9a959dddd0ccd2cad4d4c1aca5d7818dcb8d9b9cc1c2d6c6c1b5a7b0c8dfc9c89f8a914b646c70656e733a2d4c3c2e4d392b365334572431572232592b3f295a4e7b7e52424a0577711b01786e171a0a7d6d120217627a0905" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue1Z" id="tue1ZC" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="tue1ZC" class="radio">フレッシャーズ・セミナー[青山]</label>
+            <input type="radio" name="tue1Z" id="tue1ZD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1ZD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue1Z" id="tue1ZE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1ZE" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue1Z" id="tue1ZF" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1ZF" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue1Z" id="tue1ZG" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue1ZG" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue1Z" id="tue1ZH" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue1ZH" class="radio">科学・技術の視点(個別科目)[青山]</label>
             <input type="radio" name="tue1Z" id="tue1Zremove" value="" onclick="clickSelect(name, value)"><label for="tue1Zremove" class="radio">取り消し</label>
         </div>
         <div id="_7">
@@ -114,9 +182,18 @@
         </div>
         <div id="_8">
             <p>火3</p>
-            <input type="radio" name="tue3Z" id="tue3Z自己理解(個別科目)" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue3Z自己理解(個別科目)" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue3Z" id="tue3ZA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="tue3ZA" class="radio">フレッシャーズ・セミナー[青山]</label>
+            <input type="radio" name="tue3Z" id="tue3ZB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3ZB" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue3Z" id="tue3ZC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3ZC" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue3Z" id="tue3ZD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3ZD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue3Z" id="tue3ZE" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="tue3ZE" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="tue3Z" id="tue3ZF" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue3ZF" class="radio">自己理解(個別科目)[青山]</label>
+            <input type="radio" name="tue3Z" id="tue3ZG" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue3ZG" class="radio">科学・技術の視点(個別科目)[青山]</label>
             <input type="radio" name="tue3Z" id="tue3Zremove" value="" onclick="clickSelect(name, value)"><label for="tue3Zremove" class="radio">取り消し</label>
-
         </div>
         <div id="_9">
             <p>火4</p>
@@ -132,11 +209,11 @@
         </div>
         <div id="_12">
             <p>水2</p>
-            <input type="radio" name="wed2Z" id="wed2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect('wed2Z', 'キャリアデザイン・セミナー[青山]')"><label for="wed2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー[青山]</label>
+            <input type="radio" name="wed2Z" id="wed2Zキャリアデザイン・セミナー" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="wed2Zキャリアデザイン・セミナー" class="radio">キャリアデザイン・セミナー[青山]</label>
         </div>
         <div id="_13">
             <p>水3</p>
-
+            <input type="radio" name="wed3Z" id="wed3Z地方行政と産業振興" value="地方行政と産業振興" onclick="clickSelect(name, value)"><label for="wed3Z地方行政と産業振興" class="radio">地方行政と産業振興</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=4611810-0041&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e69731d1e657c1f62791c6d7a21274726514024544d2b5c4d2b2f5f2d2f414f55333e344a5e3d3646161c581cf4edb2b3a1b7b2c4d8c1bbaebeb9ecfbfedaf7fde7f4fde2a5bcdfadb9dcaaba99e287e69380e4938de8988e9eebfdcad1c3d1db92e6e28a9ee9fd869aedfd82f0e7928af9f5" target="_blank">詳細</a>
         </div>
         <div id="_14">
             <p>水4</p>
@@ -186,10 +263,13 @@
         </div>
         <div id="_25">
             <p>金5</p>
+            <input type="radio" name="fri5Z" id="fri5Zremove" value="" onclick="clickSelect(name, value)"><label for="fri5Zremove" class="radio">取り消し</label>
         </div>
         <div id="_26">
             <p>土1</p>
-
+            <input type="radio" name="sat1Z" id="sat1ZA" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="sat1ZA" class="radio">自己理解(個別科目)[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-0945&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e6970136f7d616d7e1d1c7b1a55442054412757422d5e4f525c48565955344a56354253364b5f3132415b273db1bcededa2dcc4b1b5e6e4adcbcfbfcdcfa1afa5a5a4a6a5a8bfddd0dea0afb1918f939182e1ea9ac2c88cc8d8c19e9f958386f0e4fd87928a8dd8cfd2f6dbd1b3a0a9b6f9e083f1ed88feeef58eeb8ae7f490e7f194e4f2ea9f89bebdafbdb7c6b2b6dec2b5a1dadbcfbaa8d1dcc8bfb9ccc2" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="sat1Z" id="sat1Zremove" value="" onclick="clickSelect(name, value)"><label for="sat1Zremove" class="radio">取り消し</label>
         </div>
         <div id="_27">
             <p>土2</p>
@@ -208,6 +288,7 @@
 <h2>後期</h2>
 <table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
     <tr style="background-color:gray">
+        <td style="width:10%;"></td>
         <td style="width:15%;">Mon</td>
         <td style="width:15%;">Tue</td>
         <td style="width:15%;">Wed</td>
@@ -359,7 +440,6 @@
         </div>
         <div id="_56">
             <p>土1</p>
-
         </div>
         <div id="_57">
             <p>土2</p>
@@ -466,15 +546,15 @@ input[type=radio]:checked + .radio:before {
 }
 
 </style>
+
 </html>
-
-
 <script>
 function radioDeselection() {
-  for (const element of document.getElementsByName('class1')) {
+  document.getElementById("time_table").style.display="none";
+  for (const element of document.getElementsByName('select_class')) {
     element.checked = false;
   }
-  for (const element of document.getElementsByName('nigai')) {
+  for (const element of document.getElementsByName('select_nigai')) {
     element.checked = false;
   }
 
@@ -486,22 +566,22 @@ function clickSelect(id, name){
 }
 
 function clickBtn(){
-    document.getElementById("example").style.display="block";
+    document.getElementById("time_table").style.display="block";
 
 	let selectClass = "";
     let selectNigai = "";
-	const class1 = document.select_form.class1;
-	const nigai = document.select_form.nigai;
+	const select_class = document.select_form.select_class;
+	const select_nigai = document.select_form.select_nigai;
 
-	for (let i = 0; i < class1.length; i++){
-		if(class1[i].checked){ //(color1[i].checked === true)と同じ
-			selectClass = class1[i].value;
+	for (let i = 0; i < select_class.length; i++){
+		if(select_class[i].checked){ //(color1[i].checked === true)と同じ
+			selectClass = select_class[i].value;
 			break;
 		}
 	}
-    for (let i = 0; i < nigai.length; i++){
-		if(nigai[i].checked){ //(color1[i].checked === true)と同じ
-			selectNigai = nigai[i].value;
+    for (let i = 0; i < select_nigai.length; i++){
+		if(select_nigai[i].checked){ //(color1[i].checked === true)と同じ
+			selectNigai = select_nigai[i].value;
 			break;
 		}
 	}
@@ -525,10 +605,10 @@ function clickBtn(){
         document.getElementById("thu3K").textContent = selectNigai + 'Ⅰ(B)-2';
     }
     if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
-        document.getElementById("mon4Z").textContent = "English";
-        document.getElementById("thu5Z").textContent = "English";
-        document.getElementById("mon4K").textContent = "English";
-        document.getElementById("thu5K").textContent = "English";
+        document.getElementById("mon4Z").textContent = "Integrated EnglishⅠ";
+        document.getElementById("thu5Z").textContent = "Integrated EnglishⅠ";
+        document.getElementById("mon4K").textContent = "Integrated EnglishⅡ";
+        document.getElementById("thu5K").textContent = "Integrated EnglishⅡ";
         document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
         document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
         // document.getElementById("mon5K").innerHTML = '<a href="https://www.google.com">_</a>';
@@ -538,10 +618,10 @@ function clickBtn(){
         document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
         // document.getElementById("mon4K").innerHTML = '<a href="https://www.google.com">_</a>';
         // document.getElementById("thu5K").innerHTML = '<a href="https://www.google.com">_</a>';
-        document.getElementById("mon5Z").textContent = "English";
-        document.getElementById("thu4Z").textContent = "English";
-        document.getElementById("mon5K").textContent = "English";
-        document.getElementById("thu4K").textContent = "English";
+        document.getElementById("mon5Z").textContent = "Integrated EnglishⅠ";
+        document.getElementById("thu4Z").textContent = "Integrated EnglishⅠ";
+        document.getElementById("mon5K").textContent = "Integrated EnglishⅡ";
+        document.getElementById("thu4K").textContent = "Integrated EnglishⅡ";
     }
 }
 function hide() {
@@ -557,7 +637,7 @@ function hyoji(num)
   
 }
 window.onload = function() {
-    document.getElementById("example").style.display="none";
+    document.getElementById("time_table").style.display="none";
     hide()
     document.getElementById("mon1Z").innerHTML = "<input type='button' value='' onclick='hyoji(1)'>";
     document.getElementById("mon2Z").innerHTML = "<input type='button' value='' onclick='hyoji(2)'>";
