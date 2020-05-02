@@ -31,6 +31,7 @@
     </form>
     <input class="button" type="button" value="決定" onclick="clickBtn()"/>
     <input class="button" type="button" value="リセット" onclick="radioDeselection()"/>
+    <br><br>
 
     <div id="time_table">
         <h2>前期</h2>
@@ -1104,6 +1105,7 @@
 </html>
 
 <script>
+    
     function radioDeselection() {
         document.getElementById("time_table").style.display="none";
         for (const element of document.getElementsByName('select_class')) {
@@ -1114,8 +1116,10 @@
             element.checked = false;
             element.disabled = false;
         }
+        reset()
         resetClass()
     }
+
     function clickSelect(id, name){
         if (name != "") {
             eval(id.substr(-5) + "__ = 2");
@@ -1125,14 +1129,8 @@
         document.getElementById(id + "_").textContent = name;
         hide()
         let plustanni = 0
-        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-        for (let i = 1; i < 6; i++){
-            for (let z = 0; z < day.length; z++){
-                plustanni += Number(eval(day[z] + i + "Z__"))
-            }
-            for (let k = 0; k < day.length; k++){
-                plustanni += Number(eval(day[k] + i + "K__"))
-            }
+        for (let i = 0; i < day.length; i++){
+            plustanni += Number(eval(day[i] + "__"))
         }
         document.getElementById("tanni").textContent = 26 + plustanni
     }
@@ -1173,15 +1171,7 @@
             document.getElementById("sat2Z").textContent = selectNigai + 'Ⅰ(B)-1';
             document.getElementById("sat1K").textContent = selectNigai + 'Ⅰ(A)-2';
             document.getElementById("sat2K").textContent = selectNigai + 'Ⅰ(B)-2';
-            document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
-            document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
-            document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
-            document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
         }else {
-            document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
-            document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
-            document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
-            document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
             document.getElementById("tue3Z").textContent = selectNigai + 'Ⅰ(A)-1';
             document.getElementById("thu3Z").textContent = selectNigai + 'Ⅰ(B)-1';
             document.getElementById("tue3K").textContent = selectNigai + 'Ⅰ(A)-2';
@@ -1189,29 +1179,19 @@
         }
         if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
             document.getElementById("thu1K").textContent = "キリスト教概論Ⅰ";
-            document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
-
             document.getElementById("mon4Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("thu5Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("mon4K").textContent = "Integrated EnglishⅡ";
             document.getElementById("thu5K").textContent = "Integrated EnglishⅡ";
-            document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
-            document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
-            document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
-            document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
         } else {
             document.getElementById("thu2K").textContent = "キリスト教概論Ⅰ";
-            document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
-            document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
-            document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
-            document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
-            document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
             document.getElementById("mon5Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("thu4Z").textContent = "Integrated EnglishⅠ";
             document.getElementById("mon5K").textContent = "Integrated EnglishⅡ";
             document.getElementById("thu4K").textContent = "Integrated EnglishⅡ";
         }
     }
+
     function hide() {
         for (let i = 1; i < 61; i++) {
         document.getElementById("_" + i).style.display="none";
@@ -1224,184 +1204,55 @@
     }
 
     function tanni() {
-        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-        for (let i = 1; i < 6; i++){
-            for (let z = 0; z < day.length; z++){
-                eval(day[z] + i + "Z__ = 0");
-            }
-            for (let k = 0; k < day.length; k++){
-                eval(day[k] + i + "K__ = 0");
-            }
+        for (let i = 0; i < day.length; i++){
+            eval(day[i] + "__ = 0")
         }
     }
 
     function reset (){
-        document.getElementById("mon1Z").innerHTML = "<input type='button' value='' onclick='hyoji(1)'>";
-        document.getElementById("mon2Z").innerHTML = "<input type='button' value='' onclick='hyoji(2)'>";
-        document.getElementById("mon3Z").innerHTML = "<input type='button' value='' onclick='hyoji(3)'>";
-        document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
-        document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
-        document.getElementById("tue1Z").innerHTML = "<input type='button' value='' onclick='hyoji(6)'>";
-        // document.getElementById("tue2Z").innerHTML = "<input type='button' value='' onclick='hyoji(7)'>";
-        document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
-        // document.getElementById("tue4Z").innerHTML = "<input type='button' value='' onclick='hyoji(9)'>";
-        // document.getElementById("tue5Z").innerHTML = "<input type='button' value='' onclick='hyoji(10)'>";
-        document.getElementById("wed1Z").innerHTML = "<input type='button' value='' onclick='hyoji(11)'>";
-        document.getElementById("wed2Z").innerHTML = "<input type='button' value='' onclick='hyoji(12)'>";
-        document.getElementById("wed3Z").innerHTML = "<input type='button' value='' onclick='hyoji(13)'>";
-        document.getElementById("wed4Z").innerHTML = "<input type='button' value='' onclick='hyoji(14)'>";
-        document.getElementById("wed5Z").innerHTML = "<input type='button' value='' onclick='hyoji(15)'>";
-        document.getElementById("thu1Z").innerHTML = "<input type='button' value='' onclick='hyoji(16)'>";
-        document.getElementById("thu2Z").innerHTML = "<input type='button' value='' onclick='hyoji(17)'>";
-        document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
-        document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
-        document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
-        document.getElementById("fri1Z").innerHTML = "<input type='button' value='' onclick='hyoji(21)'>";
-        document.getElementById("fri2Z").innerHTML = "<input type='button' value='' onclick='hyoji(22)'>";
-        // document.getElementById("fri3Z").innerHTML = "<input type='button' value='' onclick='hyoji(23)'>";
-        document.getElementById("fri4Z").innerHTML = "<input type='button' value='' onclick='hyoji(24)'>";
-        document.getElementById("fri5Z").innerHTML = "<input type='button' value='' onclick='hyoji(25)'>";
-        document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
-        document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
-        document.getElementById("sat3Z").innerHTML = "<input type='button' value='' onclick='hyoji(28)'>";
-        document.getElementById("sat4Z").innerHTML = "<input type='button' value='' onclick='hyoji(29)'>";
-        document.getElementById("sat5Z").innerHTML = "<input type='button' value='' onclick='hyoji(30)'>";
-
-        document.getElementById("mon1K").innerHTML = "<input type='button' value='' onclick='hyoji(31)'>";
-        document.getElementById("mon2K").innerHTML = "<input type='button' value='' onclick='hyoji(32)'>";
-        // document.getElementById("mon3K").innerHTML = "<input type='button' value='' onclick='hyoji(33)'>";
-        document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
-        document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
-        document.getElementById("tue1K").innerHTML = "<input type='button' value='' onclick='hyoji(36)'>";
-        document.getElementById("tue2K").innerHTML = "<input type='button' value='' onclick='hyoji(37)'>";
-        document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
-        // document.getElementById("tue4K").innerHTML = "<input type='button' value='' onclick='hyoji(39)'>";
-        // document.getElementById("tue5K").innerHTML = "<input type='button' value='' onclick='hyoji(40)'>";
-        document.getElementById("wed1K").innerHTML = "<input type='button' value='' onclick='hyoji(41)'>";
-        document.getElementById("wed2K").innerHTML = "<input type='button' value='' onclick='hyoji(42)'>";
-        document.getElementById("wed3K").innerHTML = "<input type='button' value='' onclick='hyoji(43)'>";
-        document.getElementById("wed4K").innerHTML = "<input type='button' value='' onclick='hyoji(44)'>";
-        document.getElementById("wed5K").innerHTML = "<input type='button' value='' onclick='hyoji(45)'>";
-        document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
-        document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
-        document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
-        document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
-        document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
-        // document.getElementById("fri1K").innerHTML = "<input type='button' value='' onclick='hyoji(51)'>";
-        // document.getElementById("fri2K").innerHTML = "<input type='button' value='' onclick='hyoji(52)'>";
-        // document.getElementById("fri3K").innerHTML = "<input type='button' value='' onclick='hyoji(53)'>";
-        document.getElementById("fri4K").innerHTML = "<input type='button' value='' onclick='hyoji(54)'>";
-        document.getElementById("fri5K").innerHTML = "<input type='button' value='' onclick='hyoji(55)'>";
-        document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
-        document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
-        document.getElementById("sat3K").innerHTML = "<input type='button' value='' onclick='hyoji(58)'>";
-        document.getElementById("sat4K").innerHTML = "<input type='button' value='' onclick='hyoji(59)'>";
-        document.getElementById("sat5K").innerHTML = "<input type='button' value='' onclick='hyoji(60)'>";
-
+        for (let i = 0; i < day.length; i++){
+            let before = "<input type='button' value='' onclick='hyoji("
+            let after = ")'>"
+            document.getElementById(day[i]).innerHTML = before + hyoji_number[i] + after
+        }
     }
+
     function resetClass() {
-        document.getElementById("__mon1Z_").textContent = "";
-        document.getElementById("__mon2Z_").textContent = "";
-        document.getElementById("__mon3Z_").textContent = "";
-        document.getElementById("__mon4Z_").textContent = "";
-        document.getElementById("__mon5Z_").textContent = "";
-        document.getElementById("__tue1Z_").textContent = "";
-        // document.getElementById("__tue2Z_").textContent = "";
-        document.getElementById("__tue3Z_").textContent = "";
-        // document.getElementById("__tue4Z_").textContent = "";
-        // document.getElementById("__tue5Z_").textContent = "";
-        document.getElementById("__wed1Z_").textContent = "";
-        document.getElementById("__wed2Z_").textContent = "";
-        document.getElementById("__wed3Z_").textContent = "";
-        document.getElementById("__wed4Z_").textContent = "";
-        document.getElementById("__wed5Z_").textContent = "";
-        document.getElementById("__thu1Z_").textContent = "";
-        document.getElementById("__thu2Z_").textContent = "";
-        document.getElementById("__thu3Z_").textContent = "";
-        document.getElementById("__thu4Z_").textContent = "";
-        document.getElementById("__thu5Z_").textContent = "";
-        document.getElementById("__fri1Z_").textContent = "";
-        document.getElementById("__fri2Z_").textContent = "";
-        // document.getElementById("__fri3Z_").textContent = "";
-        document.getElementById("__fri4Z_").textContent = "";
-        document.getElementById("__fri5Z_").textContent = "";
-        document.getElementById("__sat1Z_").textContent = "";
-        document.getElementById("__sat2Z_").textContent = "";
-        document.getElementById("__sat3Z_").textContent = "";
-        document.getElementById("__sat4Z_").textContent = "";
-        document.getElementById("__sat5Z_").textContent = "";
-
-        document.getElementById("__mon1K_").textContent = "";
-        document.getElementById("__mon2K_").textContent = "";
-        // document.getElementById("__mon3K_").textContent = "";
-        document.getElementById("__mon4K_").textContent = "";
-        document.getElementById("__mon5K_").textContent = "";
-        document.getElementById("__tue1K_").textContent = "";
-        document.getElementById("__tue2K_").textContent = "";
-        document.getElementById("__tue3K_").textContent = "";
-        // document.getElementById("__tue4K_").textContent = "";
-        // document.getElementById("__tue5K_").textContent = "";
-        document.getElementById("__wed1K_").textContent = "";
-        document.getElementById("__wed2K_").textContent = "";
-        document.getElementById("__wed3K_").textContent = "";
-        document.getElementById("__wed4K_").textContent = "";
-        document.getElementById("__wed5K_").textContent = "";
-        document.getElementById("__thu1K_").textContent = "";
-        document.getElementById("__thu2K_").textContent = "";
-        document.getElementById("__thu3K_").textContent = "";
-        document.getElementById("__thu4K_").textContent = "";
-        document.getElementById("__thu5K_").textContent = "";
-        // document.getElementById("__fri1K_").textContent = "";
-        // document.getElementById("__fri2K_").textContent = "";
-        // document.getElementById("__fri3K_").textContent = "";
-        document.getElementById("__fri4K_").textContent = "";
-        document.getElementById("__fri5K_").textContent = "";
-        document.getElementById("__sat1K_").textContent = "";
-        document.getElementById("__sat2K_").textContent = "";
-        document.getElementById("__sat3K_").textContent = "";
-        document.getElementById("__sat4K_").textContent = "";
-        document.getElementById("__sat5K_").textContent = "";
-
+        for (let i = 0; i < day.length; i++){
+            document.getElementById("__" + day[i] + "_").textContent = "";
+        }
     }
 
     function resetCheck () {
-        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-        for (let i = 1; i < 6; i++){
-            for (let z = 0; z < day.length; z++){
-                if (!(day[z] == "tue" && i == 2)){
-                    if (!(day[z] == "fri" && i == 3)){
-                        if (!(day[z] == "tue" && i == 4)){
-                            if (!(day[z] == "tue" && i == 5)){
-                                for (const element of document.getElementsByName(eval('"__" + day[z] + i + "Z"'))) {
-                                    element.checked = false;
-                                }
-                            }
-                        }
-                    }
-                }
+        for (let i = 0; i < day.length; i++){
+            for (const element of document.getElementsByName(eval('"__" + day[i]'))) {
+                element.checked = false;
             }
-            for (let k = 0; k < day.length; k++){
-                if (!(day[k] == "mon" && i == 3)){
-                    if (!(day[k] == "tue" && i == 4)){
-                        if (!(day[k] == "tue" && i == 5)){
-                            if (!(day[k] == "fri" && i == 1)){
-                                if (!(day[k] == "fri" && i == 2)){
-                                    if (!(day[k] == "fri" && i == 3)){
-                                        for (const element of document.getElementsByName(eval(day[k] + i + "K"))) {
-                                            element.checked = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }  
+        }
     }
 
     window.onload = function() {
         document.getElementById("time_table").style.display="none";
+        day = ["mon1Z", "mon2Z", "mon3Z", "mon4Z", "mon5Z", 
+        "tue1Z", "tue3Z", 
+        "wed1Z", "wed2Z", "wed3Z","wed4Z", "wed5Z", 
+        "thu1Z", "thu2Z", "thu3Z", "thu4Z", "thu5Z", 
+        "fri1Z", "fri2Z", "fri4Z", "fri5Z", 
+        "sat1Z", "sat2Z", "sat3Z", "sat4Z", "sat5Z", 
+        "mon1K", "mon2K", "mon4K", "mon5K", 
+        "tue1K", "tue2K", "tue3K", 
+        "wed1K", "wed2K", "wed3K", "wed4K", "wed5K", 
+        "thu1K", "thu2K", "thu3K", "thu4K", "thu5K", 
+        "fri4K", "fri5K", 
+        "sat1K", "sat2K", "sat3K", "sat4K", "sat5K"]
+        hyoji_number = [
+             1,  2,  3,  4,  5,  6,      8,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22,     24, 25, 26, 27, 28, 29, 30,
+            31, 32,     34, 35, 36, 37, 38,
+            41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+                        54, 55, 56, 57, 58, 59, 60
+        ]
         tanni()
         hide()
         reset()
