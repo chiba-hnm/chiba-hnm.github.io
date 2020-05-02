@@ -241,6 +241,7 @@
             <input type="radio" name="__wed1Z" id="wed1ZD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed1ZD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
             <br>
             <input type="radio" name="__wed1Z" id="wed1Zremove" value="" onclick="clickSelect(name, value)"><label for="wed1Zremove" class="radio">取り消し</label>
+
         </div>
 
         <div id="_12">
@@ -490,140 +491,350 @@
         
         <br>
 
-<h2>後期</h2>
-<table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
-    <tr style="background-color:gray">
-        <th style="width:10%;"></th>
-        <th style="width:15%;">Mon</th>
-        <th style="width:15%;">Tue</th>
-        <th style="width:15%;">Wed</th>
-        <th style="width:15%;">Thu</th>
-        <th style="width:15%;">Fri</th>
-        <th style="width:15%;">Sat</th></tr>
+        <h2>後期</h2>
+        <table style="width: 80%;border: 1px #000000 solid;border-collapse: collapse; text-align:center;">
+            <tr style="background-color:gray">
+                <th style="width:10%;"></th>
+                <th style="width:15%;">Mon</th>
+                <th style="width:15%;">Tue</th>
+                <th style="width:15%;">Wed</th>
+                <th style="width:15%;">Thu</th>
+                <th style="width:15%;">Fri</th>
+                <th style="width:15%;">Sat</th>
+            </tr>
             <tr>
-        <td>1</td>
-        <td><span id="mon1K"></span><span id="__mon1K_"></span></td>
-        <td><span id="tue1K"></span><span id="__tue1K_"></span></td>
-        <td><span id="wed1K"></span><span id="__wed1K_"></span></td>
-        <td><span id="thu1K"></span><span id="__thu1K_"></span></td>
-        <td>コンピューティング実習</td>
-        <td><span id="sat1K"></span><span id="__sat1K_"></span></td>
-        </tr>
-        <tr>
-        <td>2</td>
-        <td><span id="mon2K"></span><span id="__mon2K_"></span></td>
-        <td><span id="tue2K"></span><span id="__tue2K_"></span></td>
-        <td><span id="wed2K"></span><span id="__wed2K_"></span></td>
-        <td><span id="thu2K"></span><span id="__thu2K_"></span></td>
-        <td>コンピューティング実習</td>
-        <td><span id="sat2K"></span><span id="__sat2K_"></span></td>
-        </tr>
-        <tr>
-        <td>3</td>
-        <td>人間科学概論</td>
-        <td><span id="tue3K"></span><span id="__tue3K_"></span></td>
-        <td><span id="wed3K"></span><span id="__wed3K_"></span></td>
-        <td><span id="thu3K"></span><span id="__thu3K_"></span></td>
-        <td>社会科学概論</td>
-        <td><span id="sat3K"></span><span id="__sat3K_"></span></td>
-        </tr>
-        <tr>
-        <td>4</td>
-        <td><span id="mon4K"></span><span id="__mon4K_"></span></td>
-        <td>統計入門</td>
-        <td><span id="wed4K"></span><span id="__wed4K_"></span></td>
-        <td><span id="thu4K"></span><span id="__thu4K_"></span></td>
-        <td><span id="fri4K"></span><span id="__fri4K_"></span></td>
-        <td><span id="sat4K"></span><span id="__sat4K_"></span></td>
-        </tr>
-        <tr>
-        <td>5</td>
-        <td><span id="mon5K"></span><span id="__mon5K_"></span></td>
-        <td>統計入門</td>
-        <td><span id="wed5K"></span><span id="__wed5K_"></span></td>
-        <td><span id="thu5K"></span><span id="__thu5K_"></span></td>
-        <td><span id="fri5K"></span><span id="__fri5K_"></span></td>
-        <td><span id="sat5K"></span><span id="__sat5K_"></span></td>
-        </tr>
+                <td>1</td>
+                <td><span id="mon1K"></span><span id="__mon1K_"></span></td>
+                <td><span id="tue1K"></span><span id="__tue1K_"></span></td>
+                <td><span id="wed1K"></span><span id="__wed1K_"></span></td>
+                <td><span id="thu1K"></span><span id="__thu1K_"></span></td>
+                <td>コンピューティング実習</td>
+                <td><span id="sat1K"></span><span id="__sat1K_"></span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><span id="mon2K"></span><span id="__mon2K_"></span></td>
+                <td><span id="tue2K"></span><span id="__tue2K_"></span></td>
+                <td><span id="wed2K"></span><span id="__wed2K_"></span></td>
+                <td><span id="thu2K"></span><span id="__thu2K_"></span></td>
+                <td>コンピューティング実習</td>
+                <td><span id="sat2K"></span><span id="__sat2K_"></span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>人間科学概論</td>
+                <td><span id="tue3K"></span><span id="__tue3K_"></span></td>
+                <td><span id="wed3K"></span><span id="__wed3K_"></span></td>
+                <td><span id="thu3K"></span><span id="__thu3K_"></span></td>
+                <td>社会科学概論</td>
+                <td><span id="sat3K"></span><span id="__sat3K_"></span></td>
+            </tr>
+            <tr>
+            <td>4</td>
+                <td><span id="mon4K"></span><span id="__mon4K_"></span></td>
+                <td>統計入門</td>
+                <td><span id="wed4K"></span><span id="__wed4K_"></span></td>
+                <td><span id="thu4K"></span><span id="__thu4K_"></span></td>
+                <td><span id="fri4K"></span><span id="__fri4K_"></span></td>
+                <td><span id="sat4K"></span><span id="__sat4K_"></span></td>
+                </tr>
+            <tr>
+            <td>5</td>
+                <td><span id="mon5K"></span><span id="__mon5K_"></span></td>
+                <td>統計入門</td>
+                <td><span id="wed5K"></span><span id="__wed5K_"></span></td>
+                <td><span id="thu5K"></span><span id="__thu5K_"></span></td>
+                <td><span id="fri5K"></span><span id="__fri5K_"></span></td>
+                <td><span id="sat5K"></span><span id="__sat5K_"></span></td>
+            </tr>
         </table>
         <br>
+
         <div id="_31">
             <p>月1</p>
+            <input type="radio" name="__mon1K" id="mon1KA" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1KA" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon1K" id="mon1KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1KB" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon1K" id="mon1KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1KC" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon1K" id="mon1KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="mon1KD" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon1K" id="mon1KE" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon1KE" class="radio">健康・スポーツ演習</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon1K" id="mon1Kremove" value="" onclick="clickSelect(name, value)"><label for="mon1Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_32">
             <p>月2</p>
-            <input type="radio" name="mon2K" id="mon2K社会数理入門Ⅱ" value="社会数理入門Ⅱ" onclick="clickSelect('mon2K', '社会数理入門Ⅱ')"><label for="mon2K社会数理入門Ⅱ" class="radio">社会数理入門Ⅱ</label>
+            <input type="radio" name="__mon2K" id="mon2KA" value="社会数理入門Ⅱ" onclick="clickSelect(name, value)"><label for="mon2KA" class="radio">社会数理入門Ⅱ</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KB" value="キャリアデザイン・セミナー" onclick="clickSelect(name, value)"><label for="mon2KB" class="radio">キャリアデザイン・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KC" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon2KC" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KD" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="mon2KD" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KE" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2KE" class="radio">自己理解(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KF" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2KF" class="radio">自己理解(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KG" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2KG" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KH" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon2KH" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2KI" value="現代社会の諸問題(総合科目)" onclick="clickSelect(name, value)"><label for="mon2KI" class="radio">現代社会の諸問題(総合科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon2K" id="mon2Kremove" value="" onclick="clickSelect(name, value)"><label for="mon2Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_33">
             <p>月3</p>
         </div>
+
         <div id="_34">
             <p>月4</p>
-            <input type="radio" name="mon4K" id="mon4K社会数理Ⅱ" value="社会数理Ⅱ" onclick="clickSelect('mon4K', '社会数理Ⅱ')"><label for="mon4K社会数理Ⅱ" class="radio">社会数理Ⅱ</label>
+            <input type="radio" name="__mon4K" id="mon4KA" value="社会数理Ⅱ" onclick="clickSelect(name, value)"><label for="mon4KA" class="radio">社会数理Ⅱ</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon4K" id="mon4KB" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon4KB" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon4K" id="mon4KC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="mon4KC" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon4K" id="mon4KD" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon4KD" class="radio">科学・技術の視点(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon4K" id="mon4KE" value="歴史と人間(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon4KE" class="radio">歴史と人間(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon4K" id="mon4Kremove" value="" onclick="clickSelect(name, value)"><label for="mon4Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_35">
             <p>月5</p>
-            <input type="radio" name="mon5K" id="mon5K社会数理Ⅱ" value="社会数理Ⅱ" onclick="clickSelect('mon5K', '社会数理Ⅱ')"><label for="mon5K社会数理Ⅱ" class="radio">社会数理Ⅱ</label>
+            <input type="radio" name="__mon5K" id="mon5KA" value="社会数理Ⅱ" onclick="clickSelect(name, value)"><label for="mon5KA" class="radio">社会数理Ⅱ</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon5K" id="mon5KB" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon5KB" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon5K" id="mon5KC" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="mon5KC" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon5K" id="mon5KD" value="自己理解(個別科目)" onclick="clickSelect(name, value)"><label for="mon5KD" class="radio">自己理解(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon5K" id="mon5KE" value="科学・技術の視点(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="mon5KE" class="radio">科学・技術の視点(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__mon5K" id="mon5Kremove" value="" onclick="clickSelect(name, value)"><label for="mon5Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_36">
             <p>火1</p>
-            <input type="radio" name="tue1K" id="tue1Kremove" value="" onclick="clickSelect('tue1K', '')"><label for="tue1Kremove" class="radio">取り消し</label>
+            <input type="radio" name="__tue1K" id="tue1KA" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1KA" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue1K" id="tue1KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1KB" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue1K" id="tue1KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue1KC" class="radio">健康・スポーツ演習[青山]</label><a href="http://syllabus.aoyama.ac.jp/shousai.ashx?YR=2020&FN=1611020-1221&KW=&BQ=3f5e5d46524048535c48584c495933294f4e5745515b42564a5e4f5659534a22067e7d756d6071747c687e6e6b68606a6270667c6608050701780d087a0c1866127c7073767560051d74081e7d6b05186d77191e697013627d616b7e1d687b1a55442022412751422d5a4f535f482c2d553441564c475335415c3f4859454d5ab9c5a7c6b7a0beb4adcbc9aec9beabb7a3b4aaa7b2dedfaabec0d8aaa1f2f0b9e7e393e1fb959b9199989a999c8be9e4f28c839d859b87859efdf686d6dc98dcb4adf2f3e1f7f2849881fbeefef9acbbbe9ab7bda7b4bda2e5fc9fedf99ceafad9a2c7a6d3c0a4d3cda8d8cedeabbd8a9183919bd2a6a2cadea9bdc6cfdbaebc3d3324534d3836" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue1K" id="tue1Kremove" value="" onclick="clickSelect(name, value)"><label for="tue1Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_37">
             <p>火2</p>
-
+            <input type="radio" name="__tue2K" id="tue2KA" value="キャリアデザイン・セミナー" onclick="clickSelect(name, value)"><label for="tue2KA" class="radio">キャリアデザイン・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KB" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="tue2KB" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue2KC" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue2KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue2KE" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KF" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue2KF" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KG" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="tue2KG" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2KH" value="歴史と人間(個別科目)" onclick="clickSelect(name, value)"><label for="tue2KH" class="radio">歴史と人間(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue2K" id="tue2Kremove" value="" onclick="clickSelect(name, value)"><label for="tue2Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_38">
             <p>火3</p>
-
+            <input type="radio" name="__tue3K" id="tue3KA" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="tue3KA" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3KB" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3KC" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="tue3KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3KE" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="tue3KE" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3KF" value="自己理解(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="tue3KF" class="radio"></label><a href="自己理解(個別科目)[青山]" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__tue3K" id="tue3Kremove" value="" onclick="clickSelect(name, value)"><label for="tue3Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_39">
             <p>火4</p>
-
         </div>
+
         <div id="_40">
             <p>火5</p>
 
         </div>
         <div id="_41">
             <p>水1</p>
-
+            <input type="radio" name="__wed1K" id="wed1KA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="wed1KA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KB" value="フレッシャーズ・セミナー(英語講義)[青山]" onclick="clickSelect(name, value)"><label for="wed1KB" class="radio">フレッシャーズ・セミナー(英語講義)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="wed1KC" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed1KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed1KE" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KF" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed1KF" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1KG" value="自己理解(総合科目)[青山]" onclick="clickSelect(name, value)"><label for="wed1KG" class="radio">自己理解(総合科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed1K" id="wed1Kremove" value="" onclick="clickSelect(name, value)"><label for="wed1Kremove" class="radio">取り消し</label>
         </div>
         <div id="_42">
             <p>水2</p>
+            <input type="radio" name="__wed2K" id="wed2KA" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="wed2KA" class="radio">キャリアデザイン・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KB" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="wed2KB" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="wed2KC" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed2KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed2KE" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KF" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed2KF" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KG" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed2KG" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KH" value="自己理解(個別科目)(英語講義)[青山]" onclick="clickSelect(name, value)"><label for="wed2KH" class="radio">自己理解(個別科目)(英語講義)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KH" value="現代社会の諸問題(総合科目)[青山]" onclick="clickSelect(name, value)"><label for="wed2KH" class="radio">現代社会の諸問題(総合科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2KI" value="歴史と人間(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="wed2KI" class="radio">歴史と人間(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed2K" id="wed2Kremove" value="" onclick="clickSelect(name, value)"><label for="wed2Kremove" class="radio">取り消し</label>
+
         </div>
         <div id="_43">
             <p>水3</p>
-
+            <input type="radio" name="__wed3K" id="wed3KA" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed3KA" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed3KB" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed3KC" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="wed3KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KE" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="wed3KE" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KF" value="歴史と人間(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="wed3KF" class="radio">歴史と人間(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3KG" value="歴史と人間(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="wed3KG" class="radio">歴史と人間(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed3K" id="wed3Kremove" value="" onclick="clickSelect(name, value)"><label for="wed3Kremove" class="radio">取り消し</label>
         </div>
+        
         <div id="_44">
             <p>水4</p>
-
         </div>
+
         <div id="_45">
             <p>水5</p>
-
+            <input type="radio" name="__wed5K" id="wed5KA" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="wed5KA" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__wed5K" id="wed5Kremove" value="" onclick="clickSelect(name, value)"><label for="wed5Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_46">
             <p>木1</p>
+            <input type="radio" name="__thu1K" id="thu1KA" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="thu1KA" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu1KB" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu1KC" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu1KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KE" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="thu1KE" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KF" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="thu1KF" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KG" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="thu1KG" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1KH" value="歴史と人間(個別科目)" onclick="clickSelect(name, value)"><label for="thu1KH" class="radio">歴史と人間(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu1K" id="thu1Kremove" value="" onclick="clickSelect(name, value)"><label for="thu1Kremove" class="radio">取り消し</label>
+
 
         </div>
         <div id="_47">
             <p>木2</p>
-
+            <input type="radio" name="__thu2K" id="thu2KA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="thu2KA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KB" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu2KB" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KC" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu2KC" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KD" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu2KD" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KE" value="健康・スポーツ演習[青山]" onclick="clickSelect(name, value)"><label for="thu2KE" class="radio">健康・スポーツ演習[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KF" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="thu2KF" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KG" value="健康・スポーツ演習" onclick="clickSelect(name, value)"><label for="thu2KG" class="radio">健康・スポーツ演習</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KH" value="科学・技術の視点(個別科目)" onclick="clickSelect(name, value)"><label for="thu2KH" class="radio">科学・技術の視点(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2KI" value="歴史と人間(個別科目)" onclick="clickSelect(name, value)"><label for="thu2KI" class="radio">歴史と人間(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu2K" id="thu2Kremove" value="" onclick="clickSelect(name, value)"><label for="thu2Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_48">
             <p>木3</p>
-
+            <input type="radio" name="__thu3K" id="thu3KA" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="thu3KA" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu3K" id="thu3KB" value="自己理解(総合科目)[青山]" onclick="clickSelect(name, value)"><label for="thu3KB" class="radio">自己理解(総合科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu3K" id="thu3KC" value="自己理解(総合科目)" onclick="clickSelect(name, value)"><label for="thu3KC" class="radio">自己理解(総合科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu3K" id="thu3KD" value="現代社会の諸問題(個別科目)" onclick="clickSelect(name, value)"><label for="thu3KD" class="radio">現代社会の諸問題(個別科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu3K" id="thu3Kremove" value="" onclick="clickSelect(name, value)"><label for="thu3Kremove" class="radio">取り消し</label>
         </div>
+
         <div id="_49">
             <p>木4</p>
-            <input type="radio" name="thu4K" id="thu4K数理情報Ⅰ" value="数理情報Ⅰ" onclick="clickSelect('thu4K', '数理情報Ⅰ')"><label for="thu4K数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
-            
+            <input type="radio" name="__thu4K" id="thu4KA" value="数理情報Ⅱ" onclick="clickSelect(name, value)"><label for="thu4KA" class="radio">数理情報Ⅱ</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu4K" id="thu4KB" value="キャリアデザイン・セミナー[青山]" onclick="clickSelect(name, value)"><label for="thu4KB" class="radio">キャリアデザイン・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu4K" id="thu4KC" value="フレッシャーズ・セミナー" onclick="clickSelect(name, value)"><label for="thu4KC" class="radio">フレッシャーズ・セミナー</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu4K" id="thu4KD" value="自己理解(総合科目)" onclick="clickSelect(name, value)"><label for="thu4KD" class="radio">自己理解(総合科目)</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu4K" id="thu4KE" value="現代社会の諸問題(個別科目)" onclick="clickSelect(name, value)">現代社会の諸問題(個別科目)<label for="thu4KE" class="radio"></label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu4K" id="thu4Kremove" value="" onclick="clickSelect(name, value)"><label for="thu4Kremove" class="radio">取り消し</label>    
         </div>
+
         <div id="_50">
             <p>木5</p>
-            <input type="radio" name="thu5K" id="thu5K数理情報Ⅰ" value="数理情報Ⅰ" onclick="clickSelect('thu5K', '数理情報Ⅰ')"><label for="thu5K数理情報Ⅰ" class="radio">数理情報Ⅰ</label>
+            <input type="radio" name="__thu5K" id="thu5KA" value="数理情報Ⅱ" onclick="clickSelect(name, value)"><label for="thu5KA" class="radio">数理情報Ⅱ</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu5K" id="thu5KB" value="現代社会の諸問題(個別科目)(英語講義))[青山]" onclick="clickSelect(name, value)"><label for="thu5KB" class="radio">現代社会の諸問題(個別科目)(英語講義))[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu5K" id="thu5KC" value="科学・技術の視点(総合科目)[青山]" onclick="clickSelect(name, value)"><label for="thu5KC" class="radio">科学・技術の視点(総合科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__thu5K" id="thu5Kremove" value="" onclick="clickSelect(name, value)"><label for="thu5Kremove" class="radio">取り消し</label>
+
         </div>
         <div id="_51">
             <p>金1</p>
@@ -639,9 +850,21 @@
         </div>
         <div id="_54">
             <p>金4</p>
+            <input type="radio" name="__fri4K" id="fri4KA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="fri4KA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__fri4K" id="fri4KB" value="現代社会の諸問題(個別科目)[青山]" onclick="clickSelect(name, value)"><label for="fri4KB" class="radio">現代社会の諸問題(個別科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__fri5K" id="fri5Kremove" value="" onclick="clickSelect(name, value)"><label for="fri5Kremove" class="radio">取り消し</label>
+
         </div>
         <div id="_55">
             <p>金5</p>
+            <input type="radio" name="__fri5K" id="fri5KA" value="フレッシャーズ・セミナー[青山]" onclick="clickSelect(name, value)"><label for="fri5KA" class="radio">フレッシャーズ・セミナー[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__fri5K" id="fri5KB" value="科学・技術の視点(総合科目)[青山]" onclick="clickSelect(name, value)"><label for="fri5KB" class="radio">科学・技術の視点(総合科目)[青山]</label><a href="" target="_blank">詳細</a>
+            <br>
+            <input type="radio" name="__fri5K" id="fri5Kremove" value="" onclick="clickSelect(name, value)"><label for="fri5Kremove" class="radio">取り消し</label>
+
         </div>
         <div id="_56">
             <p>土1</p>
@@ -659,514 +882,497 @@
             <p>土5</p>
         </div>        
 
-    <p>他：情報スキル</p>
+        <p>他：情報スキル</p>
 
-    <div class="back">
-計：<span id="tanni"></span>単位
-    </div>
+        <div class="back">
+            計：<span id="tanni"></span>単位
+        </div>
     </div>
     
-<style>
-html {
-  margin:50px;
-}
-p {
-  font-size:20px;
-}
-.button {
-  display: inline-block;
-  max-width: 180px;
-  text-align: left;
-  border: 2px solid #9ec34b;
-  font-size: 16px;
-  color: #9ec34b;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: .4s;
-}
-.button:hover {
-  background-color: #9ec34b;
-  border-color: #cbe585;
-  color: #FFF;
-}
-/* table td {
-  
-} */
-table {
- table-layout: fixed;
- border: 1px #000000 solid;
-    /* border-collapse: separate;
-    border-spacing: 4px 4px; */
-}
-table tr td:nth-of-type(1){
-    background-color:#e5ffce;
-    border: 1px #000000 solid;
-}
-
-table tr td:nth-of-type(2),td:nth-of-type(3),td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6),td:nth-of-type(7){
-    border: 1px #000000 solid;
-    height: 70px;
-    background-color:white !important;
-    background-image: radial-gradient(rgb(248, 248, 248) 15%, transparent 16%),
-    radial-gradient(rgb(248, 248, 248) 15%, transparent 16%); 
-    background-size:30px 30px;  
-    background-position: 0 0, 15px 15px; 
-}
-
-table th {
-    height: 35px;
-    border: 1px #000000 solid;
-    font-weight: bold;
-    background:#e5ffce;
-}
-
-input[type=radio] {
-  display: none;
-}
-.radio {
-  box-sizing: border-box;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  position: relative;
-  display: inline-block;
-  margin: 0 20px 8px 0;
-  padding: 12px 12px 12px 42px;
-  border-radius: 8px;
-  background-color: #f6f7f8;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.radio:hover {
-  background-color: #e2edd7;
-}
-.radio:hover:after {
-  border-color: #53b300;
-}
-.radio:after {
-  -webkit-transition: border-color 0.2s linear;
-  transition: border-color 0.2s linear;
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  display: block;
-  margin-top: -10px;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #bbb;
-  border-radius: 6px;
-  content: '';
-}
-.radio:before {
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  display: block;
-  margin-top: -5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #53b300;
-  content: '';
-  opacity: 0;
-}
-input[type=radio]:checked + .radio:before {
-  opacity: 1;
-}
-.list39 {
-  width:50%;
-  position: relative;
-  margin: 3em 0 1em 0;
-  background: #fff6e6;
-  box-shadow: 0 2px 3px rgba(0,0,0,.22);
-}
-.list39-title {
-  font-size: 20px;
-  padding: 4px 0 4px 16px;
-  color: #ee8992;
-  font-weight:bold;
-}
-.list39:after {
-  position: absolute;
-  content: "";
-  top: 25px;
-  width: 30%;
-  height: 35px;
-  opacity: 0.8;
-  margin: -35px auto 10px 35%;
-  background-color: #ffeaea;
-  background-image:
-  linear-gradient(-45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%),
-  linear-gradient(45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%);
-  background-size: 35px 35px;
-  transform: rotate(-2deg);
-  left: 10px;
-  right: 10px;
-}
-.list39 ul,.list39 ol  {
-  position: relative;
-  margin: 0;
-  padding: 0 0.5em 0 0.5em;
-  color: #ee8992;
-  border: none;
-  list-style-type: none;
-}
-.list39 ol {
-  counter-reset: number;
-}
-.list39 ul li,.list39 ol li {
-  line-height: 1.5;
-  padding: 0.5em 0 0.5em 1.6em;
-  border-bottom: dashed 1px #ee8992;
-}
-.list39 ul li:before {
-  position: absolute;
- font-family: FontAwesome;
-  content: "\f14a";
-  left : 0.7em;
-  color: #ee8992;
-}
-.list39 ol li:before {
-  display: inline-block;
-  position: absolute;
-  font-family: "Quicksand", sans-serif;
-  content: counter(number);
-  counter-increment: number;
-  left: 0.5em;
-  width: 22px;
-  height: 22px;
-  border-radius: 20%;
-  background: #ee8992;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 22px;
-}
-.list39 ul li:last-of-type,.list39 ol li:last-of-type{
-  border-bottom: none;
-}
-a{
-  padding: 0 10px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 226, 152) 50%);
-  background-position: 0 0;
-  background-size: 200% auto;
-  transition: .3s;
-  text-decoration: none;
-  color:black;
-}
-
-a:hover{
-  background-position: -100% 0;
-  color: #fff;
-}
-.back {
-    font-size:40px;
-    text-align:center;
- position: fixed;
- width:220px;
- height:80px;
- bottom: 20px;
- right: 20px;
-  padding-top:20px;
- border:1px solid #888888;
- /* padding:2pt; */
- background-color: rgb(194, 247, 125);
- filter:alpha(opacity=85);
- -moz-opacity:0.85;
- -khtml-opacity: 0.85;
- opacity:0.85;
-     
- text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
- -webkit-box-shadow: 1px 1px 2px #E7E7E7;
- -moz-box-shadow: 1px 1px 2px #E7E7E7; 
- -webkit-border-radius: 3px; 
- -moz-border-radius: 3px;
-}
-
-</style>
-
+    <style>
+    html {
+        margin:50px;
+    }
+    p {
+        font-size:20px;
+    }
+    .button {
+        display: inline-block;
+        max-width: 180px;
+        text-align: left;
+        border: 2px solid #9ec34b;
+        font-size: 16px;
+        color: #9ec34b;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: .4s;
+    }
+    .button:hover {
+        background-color: #9ec34b;
+        border-color: #cbe585;
+        color: #FFF;
+    }
+    table {
+        table-layout: fixed;
+        border: 1px #000000 solid;
+    }
+    table tr td:nth-of-type(1){
+        background-color:#e5ffce;
+        border: 1px #000000 solid;
+    }
+    table tr td:nth-of-type(2),td:nth-of-type(3),td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6),td:nth-of-type(7){
+        border: 1px #000000 solid;
+        height: 70px;
+        background-color:white !important;
+        background-image: radial-gradient(rgb(248, 248, 248) 15%, transparent 16%),
+        radial-gradient(rgb(248, 248, 248) 15%, transparent 16%); 
+        background-size:30px 30px;  
+        background-position: 0 0, 15px 15px; 
+    }
+    table th {
+        height: 35px;
+        border: 1px #000000 solid;
+        font-weight: bold;
+        background:#e5ffce;
+    }
+    input[type=radio] {
+        display: none;
+    }
+    .radio {
+        box-sizing: border-box;
+        -webkit-transition: background-color 0.2s linear;
+        transition: background-color 0.2s linear;
+        position: relative;
+        display: inline-block;
+        margin: 0 20px 8px 0;
+        padding: 12px 12px 12px 42px;
+        border-radius: 8px;
+        background-color: #f6f7f8;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .radio:hover {
+        background-color: #e2edd7;
+    }
+    .radio:hover:after {
+        border-color: #53b300;
+    }
+    .radio:after {
+        -webkit-transition: border-color 0.2s linear;
+        transition: border-color 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        display: block;
+        margin-top: -10px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #bbb;
+        border-radius: 6px;
+        content: '';
+    }
+    .radio:before {
+        -webkit-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        display: block;
+        margin-top: -5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #53b300;
+        content: '';
+        opacity: 0;
+    }
+    input[type=radio]:checked + .radio:before {
+        opacity: 1;
+    }
+    .list39 {
+        width:50%;
+        position: relative;
+        margin: 3em 0 1em 0;
+        background: #fff6e6;
+        box-shadow: 0 2px 3px rgba(0,0,0,.22);
+    }
+    .list39-title {
+        font-size: 20px;
+        padding: 4px 0 4px 16px;
+        color: #ee8992;
+        font-weight:bold;
+    }
+    .list39:after {
+        position: absolute;
+        content: "";
+        top: 25px;
+        width: 30%;
+        height: 35px;
+        opacity: 0.8;
+        margin: -35px auto 10px 35%;
+        background-color: #ffeaea;
+        background-image:
+        linear-gradient(-45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%),
+        linear-gradient(45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%);
+        background-size: 35px 35px;
+        transform: rotate(-2deg);
+        left: 10px;
+        right: 10px;
+    }
+    .list39 ul,.list39 ol  {
+        position: relative;
+        margin: 0;
+        padding: 0 0.5em 0 0.5em;
+        color: #ee8992;
+        border: none;
+    list-style-type: none;
+    }
+    .list39 ol {
+        counter-reset: number;
+    }
+    .list39 ul li,.list39 ol li {
+        line-height: 1.5;
+        padding: 0.5em 0 0.5em 1.6em;
+        border-bottom: dashed 1px #ee8992;
+    }
+    .list39 ul li:before {
+        position: absolute;
+        font-family: FontAwesome;
+        content: "\f14a";
+        left : 0.7em;
+        color: #ee8992;
+    }
+    .list39 ol li:before {
+        display: inline-block;
+        position: absolute;
+        font-family: "Quicksand", sans-serif;
+        content: counter(number);
+        counter-increment: number;
+        left: 0.5em;
+        width: 22px;
+        height: 22px;
+        border-radius: 20%;
+        background: #ee8992;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 22px;
+    }
+    .list39 ul li:last-of-type,.list39 ol li:last-of-type{
+        border-bottom: none;
+    }
+    a{
+        padding: 0 10px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 226, 152) 50%);
+        background-position: 0 0;
+        background-size: 200% auto;
+        transition: .3s;
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        background-position: -100% 0;
+        color: #fff;
+    }
+    .back {
+        font-size:40px;
+        text-align:center;
+        position: fixed;
+        width:220px;
+        height:80px;
+        bottom: 20px;
+        right: 20px;
+        padding-top:20px;
+        border:1px solid #888888;
+        background-color: rgb(194, 247, 125);
+        filter:alpha(opacity=85);
+        -moz-opacity:0.85;
+        -khtml-opacity: 0.85;
+        opacity:0.85;    
+        text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
+        -webkit-box-shadow: 1px 1px 2px #E7E7E7;
+        -moz-box-shadow: 1px 1px 2px #E7E7E7; 
+        -webkit-border-radius: 3px; 
+        -moz-border-radius: 3px;
+    }
+    </style>
 </html>
+
 <script>
-
-function radioDeselection() {
-  document.getElementById("time_table").style.display="none";
-  for (const element of document.getElementsByName('select_class')) {
-    element.checked = false;
-  }
-  for (const element of document.getElementsByName('select_nigai')) {
-    element.checked = false;
-  }
-  resetClass()
-
-}
-function clickSelect(id, name){
-    console.log(wed1Z__)
-
-    if (name != "") {
-        eval(id.substr(-5) + "__ = 2");
-    } else {
-        eval(id.substr(-5) + "__ = 0");
-    }
-    document.getElementById(id + "_").textContent = name;
-    hide()
-    let plustanni = 0
-    let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-    for (let i = 1; i < 6; i++){
-        for (let z = 0; z < day.length; z++){
-            plustanni += Number(eval(day[z] + i + "Z__"))
+    function radioDeselection() {
+        document.getElementById("time_table").style.display="none";
+        for (const element of document.getElementsByName('select_class')) {
+            element.checked = false;
         }
-        for (let k = 0; k < day.length; k++){
-            plustanni += Number(eval(day[k] + i + "K__"))
+        for (const element of document.getElementsByName('select_nigai')) {
+            element.checked = false;
+        }
+        resetClass()
+    }
+    function clickSelect(id, name){
+        if (name != "") {
+            eval(id.substr(-5) + "__ = 2");
+        } else {
+            eval(id.substr(-5) + "__ = 0");
+        }
+        document.getElementById(id + "_").textContent = name;
+        hide()
+        let plustanni = 0
+        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
+        for (let i = 1; i < 6; i++){
+            for (let z = 0; z < day.length; z++){
+                plustanni += Number(eval(day[z] + i + "Z__"))
+            }
+            for (let k = 0; k < day.length; k++){
+                plustanni += Number(eval(day[k] + i + "K__"))
+            }
+        }
+        document.getElementById("tanni").textContent = 24 + plustanni
+    }
+
+    function clickBtn(){
+        resetCheck ()
+        document.getElementById("tanni").textContent = 24;
+        document.getElementById("time_table").style.display="block";
+
+        let selectClass = "";
+        let selectNigai = "";
+        const select_class = document.select_form.select_class;
+        const select_nigai = document.select_form.select_nigai;
+
+        for (let i = 0; i < select_class.length; i++){
+            if(select_class[i].checked){
+                selectClass = select_class[i].value;
+                break;
+            }
+        }
+        for (let i = 0; i < select_nigai.length; i++){
+            if(select_nigai[i].checked){ 
+                selectNigai = select_nigai[i].value;
+                break;
+            }
+        }
+        if(selectNigai == "韓国語" || selectNigai == "ロシア語") {
+            document.getElementById("sat1Z").textContent = selectNigai + 'Ⅰ(A)-1';
+            document.getElementById("sat2Z").textContent = selectNigai + 'Ⅰ(B)-1';
+            document.getElementById("sat1K").textContent = selectNigai + 'Ⅰ(A)-2';
+            document.getElementById("sat2K").textContent = selectNigai + 'Ⅰ(B)-2';
+            document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
+            document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
+            document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
+            document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
+        }else {
+            document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
+            document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
+            document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
+            document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
+            document.getElementById("tue3Z").textContent = selectNigai + 'Ⅰ(A)-1';
+            document.getElementById("thu3Z").textContent = selectNigai + 'Ⅰ(B)-1';
+            document.getElementById("tue3K").textContent = selectNigai + 'Ⅰ(A)-2';
+            document.getElementById("thu3K").textContent = selectNigai + 'Ⅰ(B)-2';
+        }
+        if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
+            document.getElementById("mon4Z").textContent = "Integrated EnglishⅠ";
+            document.getElementById("thu5Z").textContent = "Integrated EnglishⅠ";
+            document.getElementById("mon4K").textContent = "Integrated EnglishⅡ";
+            document.getElementById("thu5K").textContent = "Integrated EnglishⅡ";
+            document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
+            document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
+            document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
+            document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
+        } else {
+            document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
+            document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
+            document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
+            document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
+            document.getElementById("mon5Z").textContent = "Integrated EnglishⅠ";
+            document.getElementById("thu4Z").textContent = "Integrated EnglishⅠ";
+            document.getElementById("mon5K").textContent = "Integrated EnglishⅡ";
+            document.getElementById("thu4K").textContent = "Integrated EnglishⅡ";
         }
     }
-    document.getElementById("tanni").textContent = 24 + plustanni
-}
+    function hide() {
+        for (let i = 1; i < 61; i++) {
+        document.getElementById("_" + i).style.display="none";
+        }
+    }
 
-function clickBtn(){
-    resetCheck ()
+    function hyoji(num) {
+        hide()
+        document.getElementById("_" + num).style.display="block";
+    }
 
-    document.getElementById("tanni").textContent = 24;
+    function tanni() {
+        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
+        for (let i = 1; i < 6; i++){
+            for (let z = 0; z < day.length; z++){
+                eval(day[z] + i + "Z__ = 0");
+            }
+            for (let k = 0; k < day.length; k++){
+                eval(day[k] + i + "K__ = 0");
+            }
+        }
+    }
 
-    document.getElementById("time_table").style.display="block";
-
-	let selectClass = "";
-    let selectNigai = "";
-	const select_class = document.select_form.select_class;
-	const select_nigai = document.select_form.select_nigai;
-
-	for (let i = 0; i < select_class.length; i++){
-		if(select_class[i].checked){ //(color1[i].checked === true)と同じ
-			selectClass = select_class[i].value;
-			break;
-		}
-	}
-    for (let i = 0; i < select_nigai.length; i++){
-		if(select_nigai[i].checked){ //(color1[i].checked === true)と同じ
-			selectNigai = select_nigai[i].value;
-			break;
-		}
-	}
-    if(selectNigai == "韓国語" || selectNigai == "ロシア語") {
-        document.getElementById("sat1Z").textContent = selectNigai + 'Ⅰ(A)-1';
-        document.getElementById("sat2Z").textContent = selectNigai + 'Ⅰ(B)-1';
-        document.getElementById("sat1K").textContent = selectNigai + 'Ⅰ(A)-2';
-        document.getElementById("sat2K").textContent = selectNigai + 'Ⅰ(B)-2';
+    function reset (){
+        document.getElementById("mon1Z").innerHTML = "<input type='button' value='' onclick='hyoji(1)'>";
+        document.getElementById("mon2Z").innerHTML = "<input type='button' value='' onclick='hyoji(2)'>";
+        document.getElementById("mon3Z").innerHTML = "<input type='button' value='' onclick='hyoji(3)'>";
+        document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
+        document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
+        document.getElementById("tue1Z").innerHTML = "<input type='button' value='' onclick='hyoji(6)'>";
+        // document.getElementById("tue2Z").innerHTML = "<input type='button' value='' onclick='hyoji(7)'>";
         document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
+        // document.getElementById("tue4Z").innerHTML = "<input type='button' value='' onclick='hyoji(9)'>";
+        // document.getElementById("tue5Z").innerHTML = "<input type='button' value='' onclick='hyoji(10)'>";
+        document.getElementById("wed1Z").innerHTML = "<input type='button' value='' onclick='hyoji(11)'>";
+        document.getElementById("wed2Z").innerHTML = "<input type='button' value='' onclick='hyoji(12)'>";
+        document.getElementById("wed3Z").innerHTML = "<input type='button' value='' onclick='hyoji(13)'>";
+        document.getElementById("wed4Z").innerHTML = "<input type='button' value='' onclick='hyoji(14)'>";
+        document.getElementById("wed5Z").innerHTML = "<input type='button' value='' onclick='hyoji(15)'>";
+        document.getElementById("thu1Z").innerHTML = "<input type='button' value='' onclick='hyoji(16)'>";
+        document.getElementById("thu2Z").innerHTML = "<input type='button' value='' onclick='hyoji(17)'>";
         document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
-        document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
-        document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
-    }else {
+        document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
+        document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
+        document.getElementById("fri1Z").innerHTML = "<input type='button' value='' onclick='hyoji(21)'>";
+        document.getElementById("fri2Z").innerHTML = "<input type='button' value='' onclick='hyoji(22)'>";
+        // document.getElementById("fri3Z").innerHTML = "<input type='button' value='' onclick='hyoji(23)'>";
+        document.getElementById("fri4Z").innerHTML = "<input type='button' value='' onclick='hyoji(24)'>";
+        document.getElementById("fri5Z").innerHTML = "<input type='button' value='' onclick='hyoji(25)'>";
         document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
         document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
+        document.getElementById("sat3Z").innerHTML = "<input type='button' value='' onclick='hyoji(28)'>";
+        document.getElementById("sat4Z").innerHTML = "<input type='button' value='' onclick='hyoji(29)'>";
+        document.getElementById("sat5Z").innerHTML = "<input type='button' value='' onclick='hyoji(30)'>";
+
+        document.getElementById("mon1K").innerHTML = "<input type='button' value='' onclick='hyoji(31)'>";
+        document.getElementById("mon2K").innerHTML = "<input type='button' value='' onclick='hyoji(32)'>";
+        // document.getElementById("mon3K").innerHTML = "<input type='button' value='' onclick='hyoji(33)'>";
+        document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
+        document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
+        document.getElementById("tue1K").innerHTML = "<input type='button' value='' onclick='hyoji(36)'>";
+        document.getElementById("tue2K").innerHTML = "<input type='button' value='' onclick='hyoji(37)'>";
+        document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
+        // document.getElementById("tue4K").innerHTML = "<input type='button' value='' onclick='hyoji(39)'>";
+        // document.getElementById("tue5K").innerHTML = "<input type='button' value='' onclick='hyoji(40)'>";
+        document.getElementById("wed1K").innerHTML = "<input type='button' value='' onclick='hyoji(41)'>";
+        document.getElementById("wed2K").innerHTML = "<input type='button' value='' onclick='hyoji(42)'>";
+        document.getElementById("wed3K").innerHTML = "<input type='button' value='' onclick='hyoji(43)'>";
+        document.getElementById("wed4K").innerHTML = "<input type='button' value='' onclick='hyoji(44)'>";
+        document.getElementById("wed5K").innerHTML = "<input type='button' value='' onclick='hyoji(45)'>";
+        document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
+        document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
+        document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
+        document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
+        document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
+        // document.getElementById("fri1K").innerHTML = "<input type='button' value='' onclick='hyoji(51)'>";
+        // document.getElementById("fri2K").innerHTML = "<input type='button' value='' onclick='hyoji(52)'>";
+        // document.getElementById("fri3K").innerHTML = "<input type='button' value='' onclick='hyoji(53)'>";
+        document.getElementById("fri4K").innerHTML = "<input type='button' value='' onclick='hyoji(54)'>";
+        document.getElementById("fri5K").innerHTML = "<input type='button' value='' onclick='hyoji(55)'>";
         document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
         document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
-        document.getElementById("tue3Z").textContent = selectNigai + 'Ⅰ(A)-1';
-        document.getElementById("thu3Z").textContent = selectNigai + 'Ⅰ(B)-1';
-        document.getElementById("tue3K").textContent = selectNigai + 'Ⅰ(A)-2';
-        document.getElementById("thu3K").textContent = selectNigai + 'Ⅰ(B)-2';
+        document.getElementById("sat3K").innerHTML = "<input type='button' value='' onclick='hyoji(58)'>";
+        document.getElementById("sat4K").innerHTML = "<input type='button' value='' onclick='hyoji(59)'>";
+        document.getElementById("sat5K").innerHTML = "<input type='button' value='' onclick='hyoji(60)'>";
+
     }
-    if(selectClass == "A" || selectClass == "B" || selectClass == "C") {
-        document.getElementById("mon4Z").textContent = "Integrated EnglishⅠ";
-        document.getElementById("thu5Z").textContent = "Integrated EnglishⅠ";
-        document.getElementById("mon4K").textContent = "Integrated EnglishⅡ";
-        document.getElementById("thu5K").textContent = "Integrated EnglishⅡ";
-        document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
-        document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
-        // document.getElementById("mon5K").innerHTML = '<a href="https://www.google.com">_</a>';
-        // document.getElementById("thu4K").innerHTML = '<a href="https://www.google.com">_</a>';
-    } else {
-        document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
-        document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
-        // document.getElementById("mon4K").innerHTML = '<a href="https://www.google.com">_</a>';
-        // document.getElementById("thu5K").innerHTML = '<a href="https://www.google.com">_</a>';
-        document.getElementById("mon5Z").textContent = "Integrated EnglishⅠ";
-        document.getElementById("thu4Z").textContent = "Integrated EnglishⅠ";
-        document.getElementById("mon5K").textContent = "Integrated EnglishⅡ";
-        document.getElementById("thu4K").textContent = "Integrated EnglishⅡ";
+    function resetClass() {
+        document.getElementById("__mon1Z_").textContent = "";
+        document.getElementById("__mon2Z_").textContent = "";
+        document.getElementById("__mon3Z_").textContent = "";
+        document.getElementById("__mon4Z_").textContent = "";
+        document.getElementById("__mon5Z_").textContent = "";
+        document.getElementById("__tue1Z_").textContent = "";
+        // document.getElementById("__tue2Z_").textContent = "";
+        document.getElementById("__tue3Z_").textContent = "";
+        // document.getElementById("__tue4Z_").textContent = "";
+        // document.getElementById("__tue5Z_").textContent = "";
+        document.getElementById("__wed1Z_").textContent = "";
+        document.getElementById("__wed2Z_").textContent = "";
+        document.getElementById("__wed3Z_").textContent = "";
+        document.getElementById("__wed4Z_").textContent = "";
+        document.getElementById("__wed5Z_").textContent = "";
+        document.getElementById("__thu1Z_").textContent = "";
+        document.getElementById("__thu2Z_").textContent = "";
+        document.getElementById("__thu3Z_").textContent = "";
+        document.getElementById("__thu4Z_").textContent = "";
+        document.getElementById("__thu5Z_").textContent = "";
+        document.getElementById("__fri1Z_").textContent = "";
+        document.getElementById("__fri2Z_").textContent = "";
+        // document.getElementById("__fri3Z_").textContent = "";
+        document.getElementById("__fri4Z_").textContent = "";
+        document.getElementById("__fri5Z_").textContent = "";
+        document.getElementById("__sat1Z_").textContent = "";
+        document.getElementById("__sat2Z_").textContent = "";
+        document.getElementById("__sat3Z_").textContent = "";
+        document.getElementById("__sat4Z_").textContent = "";
+        document.getElementById("__sat5Z_").textContent = "";
+
+        document.getElementById("__mon1K_").textContent = "";
+        document.getElementById("__mon2K_").textContent = "";
+        // document.getElementById("__mon3K_").textContent = "";
+        document.getElementById("__mon4K_").textContent = "";
+        document.getElementById("__mon5K_").textContent = "";
+        document.getElementById("__tue1K_").textContent = "";
+        document.getElementById("__tue2K_").textContent = "";
+        document.getElementById("__tue3K_").textContent = "";
+        // document.getElementById("__tue4K_").textContent = "";
+        // document.getElementById("__tue5K_").textContent = "";
+        document.getElementById("__wed1K_").textContent = "";
+        document.getElementById("__wed2K_").textContent = "";
+        document.getElementById("__wed3K_").textContent = "";
+        document.getElementById("__wed4K_").textContent = "";
+        document.getElementById("__wed5K_").textContent = "";
+        document.getElementById("__thu1K_").textContent = "";
+        document.getElementById("__thu2K_").textContent = "";
+        document.getElementById("__thu3K_").textContent = "";
+        document.getElementById("__thu4K_").textContent = "";
+        document.getElementById("__thu5K_").textContent = "";
+        // document.getElementById("__fri1K_").textContent = "";
+        // document.getElementById("__fri2K_").textContent = "";
+        // document.getElementById("__fri3K_").textContent = "";
+        document.getElementById("__fri4K_").textContent = "";
+        document.getElementById("__fri5K_").textContent = "";
+        document.getElementById("__sat1K_").textContent = "";
+        document.getElementById("__sat2K_").textContent = "";
+        document.getElementById("__sat3K_").textContent = "";
+        document.getElementById("__sat4K_").textContent = "";
+        document.getElementById("__sat5K_").textContent = "";
+
     }
-}
-function hide() {
-    for (let i = 1; i < 61; i++) {
-      document.getElementById("_" + i).style.display="none";
-    }
-}
 
-function hyoji(num) {
-    hide()
-    document.getElementById("_" + num).style.display="block";
-}
-
-function tanni() {
-    let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-    for (let i = 1; i < 6; i++){
-        for (let z = 0; z < day.length; z++){
-            eval(day[z] + i + "Z__ = 0");
-        }
-        for (let k = 0; k < day.length; k++){
-            eval(day[k] + i + "K__ = 0");
-        }
-    }
-}
-
-function reset (){
-    document.getElementById("mon1Z").innerHTML = "<input type='button' value='' onclick='hyoji(1)'>";
-    document.getElementById("mon2Z").innerHTML = "<input type='button' value='' onclick='hyoji(2)'>";
-    document.getElementById("mon3Z").innerHTML = "<input type='button' value='' onclick='hyoji(3)'>";
-    document.getElementById("mon4Z").innerHTML = "<input type='button' value='' onclick='hyoji(4)'>";
-    document.getElementById("mon5Z").innerHTML = "<input type='button' value='' onclick='hyoji(5)'>";
-    document.getElementById("tue1Z").innerHTML = "<input type='button' value='' onclick='hyoji(6)'>";
-    // document.getElementById("tue2Z").innerHTML = "<input type='button' value='' onclick='hyoji(7)'>";
-    document.getElementById("tue3Z").innerHTML = "<input type='button' value='' onclick='hyoji(8)'>";
-    // document.getElementById("tue4Z").innerHTML = "<input type='button' value='' onclick='hyoji(9)'>";
-    // document.getElementById("tue5Z").innerHTML = "<input type='button' value='' onclick='hyoji(10)'>";
-    document.getElementById("wed1Z").innerHTML = "<input type='button' value='' onclick='hyoji(11)'>";
-    document.getElementById("wed2Z").innerHTML = "<input type='button' value='' onclick='hyoji(12)'>";
-    document.getElementById("wed3Z").innerHTML = "<input type='button' value='' onclick='hyoji(13)'>";
-    document.getElementById("wed4Z").innerHTML = "<input type='button' value='' onclick='hyoji(14)'>";
-    document.getElementById("wed5Z").innerHTML = "<input type='button' value='' onclick='hyoji(15)'>";
-    document.getElementById("thu1Z").innerHTML = "<input type='button' value='' onclick='hyoji(16)'>";
-    document.getElementById("thu2Z").innerHTML = "<input type='button' value='' onclick='hyoji(17)'>";
-    document.getElementById("thu3Z").innerHTML = "<input type='button' value='' onclick='hyoji(18)'>";
-    document.getElementById("thu4Z").innerHTML = "<input type='button' value='' onclick='hyoji(19)'>";
-    document.getElementById("thu5Z").innerHTML = "<input type='button' value='' onclick='hyoji(20)'>";
-    document.getElementById("fri1Z").innerHTML = "<input type='button' value='' onclick='hyoji(21)'>";
-    document.getElementById("fri2Z").innerHTML = "<input type='button' value='' onclick='hyoji(22)'>";
-    // document.getElementById("fri3Z").innerHTML = "<input type='button' value='' onclick='hyoji(23)'>";
-    document.getElementById("fri4Z").innerHTML = "<input type='button' value='' onclick='hyoji(24)'>";
-    document.getElementById("fri5Z").innerHTML = "<input type='button' value='' onclick='hyoji(25)'>";
-    document.getElementById("sat1Z").innerHTML = "<input type='button' value='' onclick='hyoji(26)'>";
-    document.getElementById("sat2Z").innerHTML = "<input type='button' value='' onclick='hyoji(27)'>";
-    document.getElementById("sat3Z").innerHTML = "<input type='button' value='' onclick='hyoji(28)'>";
-    document.getElementById("sat4Z").innerHTML = "<input type='button' value='' onclick='hyoji(29)'>";
-    document.getElementById("sat5Z").innerHTML = "<input type='button' value='' onclick='hyoji(30)'>";
-
-    document.getElementById("mon1K").innerHTML = "<input type='button' value='' onclick='hyoji(31)'>";
-    document.getElementById("mon2K").innerHTML = "<input type='button' value='' onclick='hyoji(32)'>";
-    // document.getElementById("mon3K").innerHTML = "<input type='button' value='' onclick='hyoji(33)'>";
-    document.getElementById("mon4K").innerHTML = "<input type='button' value='' onclick='hyoji(34)'>";
-    document.getElementById("mon5K").innerHTML = "<input type='button' value='' onclick='hyoji(35)'>";
-    document.getElementById("tue1K").innerHTML = "<input type='button' value='' onclick='hyoji(36)'>";
-    document.getElementById("tue2K").innerHTML = "<input type='button' value='' onclick='hyoji(37)'>";
-    document.getElementById("tue3K").innerHTML = "<input type='button' value='' onclick='hyoji(38)'>";
-    // document.getElementById("tue4K").innerHTML = "<input type='button' value='' onclick='hyoji(39)'>";
-    // document.getElementById("tue5K").innerHTML = "<input type='button' value='' onclick='hyoji(40)'>";
-    document.getElementById("wed1K").innerHTML = "<input type='button' value='' onclick='hyoji(41)'>";
-    document.getElementById("wed2K").innerHTML = "<input type='button' value='' onclick='hyoji(42)'>";
-    document.getElementById("wed3K").innerHTML = "<input type='button' value='' onclick='hyoji(43)'>";
-    document.getElementById("wed4K").innerHTML = "<input type='button' value='' onclick='hyoji(44)'>";
-    document.getElementById("wed5K").innerHTML = "<input type='button' value='' onclick='hyoji(45)'>";
-    document.getElementById("thu1K").innerHTML = "<input type='button' value='' onclick='hyoji(46)'>";
-    document.getElementById("thu2K").innerHTML = "<input type='button' value='' onclick='hyoji(47)'>";
-    document.getElementById("thu3K").innerHTML = "<input type='button' value='' onclick='hyoji(48)'>";
-    document.getElementById("thu4K").innerHTML = "<input type='button' value='' onclick='hyoji(49)'>";
-    document.getElementById("thu5K").innerHTML = "<input type='button' value='' onclick='hyoji(50)'>";
-    // document.getElementById("fri1K").innerHTML = "<input type='button' value='' onclick='hyoji(51)'>";
-    // document.getElementById("fri2K").innerHTML = "<input type='button' value='' onclick='hyoji(52)'>";
-    // document.getElementById("fri3K").innerHTML = "<input type='button' value='' onclick='hyoji(53)'>";
-    document.getElementById("fri4K").innerHTML = "<input type='button' value='' onclick='hyoji(54)'>";
-    document.getElementById("fri5K").innerHTML = "<input type='button' value='' onclick='hyoji(55)'>";
-    document.getElementById("sat1K").innerHTML = "<input type='button' value='' onclick='hyoji(56)'>";
-    document.getElementById("sat2K").innerHTML = "<input type='button' value='' onclick='hyoji(57)'>";
-    document.getElementById("sat3K").innerHTML = "<input type='button' value='' onclick='hyoji(58)'>";
-    document.getElementById("sat4K").innerHTML = "<input type='button' value='' onclick='hyoji(59)'>";
-    document.getElementById("sat5K").innerHTML = "<input type='button' value='' onclick='hyoji(60)'>";
-
-}
-function resetClass() {
-    document.getElementById("__mon1Z_").textContent = "";
-    document.getElementById("__mon2Z_").textContent = "";
-    document.getElementById("__mon3Z_").textContent = "";
-    document.getElementById("__mon4Z_").textContent = "";
-    document.getElementById("__mon5Z_").textContent = "";
-    document.getElementById("__tue1Z_").textContent = "";
-    // document.getElementById("__tue2Z_").textContent = "";
-    document.getElementById("__tue3Z_").textContent = "";
-    // document.getElementById("__tue4Z_").textContent = "";
-    // document.getElementById("__tue5Z_").textContent = "";
-    document.getElementById("__wed1Z_").textContent = "";
-    document.getElementById("__wed2Z_").textContent = "";
-    document.getElementById("__wed3Z_").textContent = "";
-    document.getElementById("__wed4Z_").textContent = "";
-    document.getElementById("__wed5Z_").textContent = "";
-    document.getElementById("__thu1Z_").textContent = "";
-    document.getElementById("__thu2Z_").textContent = "";
-    document.getElementById("__thu3Z_").textContent = "";
-    document.getElementById("__thu4Z_").textContent = "";
-    document.getElementById("__thu5Z_").textContent = "";
-    document.getElementById("__fri1Z_").textContent = "";
-    document.getElementById("__fri2Z_").textContent = "";
-    // document.getElementById("__fri3Z_").textContent = "";
-    document.getElementById("__fri4Z_").textContent = "";
-    document.getElementById("__fri5Z_").textContent = "";
-    document.getElementById("__sat1Z_").textContent = "";
-    document.getElementById("__sat2Z_").textContent = "";
-    document.getElementById("__sat3Z_").textContent = "";
-    document.getElementById("__sat4Z_").textContent = "";
-    document.getElementById("__sat5Z_").textContent = "";
-
-    document.getElementById("__mon1K_").textContent = "";
-    document.getElementById("__mon2K_").textContent = "";
-    // document.getElementById("__mon3K_").textContent = "";
-    document.getElementById("__mon4K_").textContent = "";
-    document.getElementById("__mon5K_").textContent = "";
-    document.getElementById("__tue1K_").textContent = "";
-    document.getElementById("__tue2K_").textContent = "";
-    document.getElementById("__tue3K_").textContent = "";
-    // document.getElementById("__tue4K_").textContent = "";
-    // document.getElementById("__tue5K_").textContent = "";
-    document.getElementById("__wed1K_").textContent = "";
-    document.getElementById("__wed2K_").textContent = "";
-    document.getElementById("__wed3K_").textContent = "";
-    document.getElementById("__wed4K_").textContent = "";
-    document.getElementById("__wed5K_").textContent = "";
-    document.getElementById("__thu1K_").textContent = "";
-    document.getElementById("__thu2K_").textContent = "";
-    document.getElementById("__thu3K_").textContent = "";
-    document.getElementById("__thu4K_").textContent = "";
-    document.getElementById("__thu5K_").textContent = "";
-    // document.getElementById("__fri1K_").textContent = "";
-    // document.getElementById("__fri2K_").textContent = "";
-    // document.getElementById("__fri3K_").textContent = "";
-    document.getElementById("__fri4K_").textContent = "";
-    document.getElementById("__fri5K_").textContent = "";
-    document.getElementById("__sat1K_").textContent = "";
-    document.getElementById("__sat2K_").textContent = "";
-    document.getElementById("__sat3K_").textContent = "";
-    document.getElementById("__sat4K_").textContent = "";
-    document.getElementById("__sat5K_").textContent = "";
-
-}
-
-function resetCheck () {
-    let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
-    for (let i = 1; i < 6; i++){
-        for (let z = 0; z < day.length; z++){
-            if (!(day[z] == "tue" && i == 2)){
-                if (!(day[z] == "fri" && i == 3)){
-                    if (!(day[z] == "tue" && i == 4)){
-                        if (!(day[z] == "tue" && i == 5)){
-                            for (const element of document.getElementsByName(eval('"__" + day[z] + i + "Z"'))) {
-                                element.checked = false;
+    function resetCheck () {
+        let day = ["mon", "tue", "wed", "thu", "fri", "sat"]
+        for (let i = 1; i < 6; i++){
+            for (let z = 0; z < day.length; z++){
+                if (!(day[z] == "tue" && i == 2)){
+                    if (!(day[z] == "fri" && i == 3)){
+                        if (!(day[z] == "tue" && i == 4)){
+                            if (!(day[z] == "tue" && i == 5)){
+                                for (const element of document.getElementsByName(eval('"__" + day[z] + i + "Z"'))) {
+                                    element.checked = false;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        for (let k = 0; k < day.length; k++){
-            if (!(day[k] == "mon" && i == 3)){
-                if (!(day[k] == "tue" && i == 4)){
-                    if (!(day[k] == "tue" && i == 5)){
-                        if (!(day[k] == "fri" && i == 1)){
-                            if (!(day[k] == "fri" && i == 2)){
-                                if (!(day[k] == "fri" && i == 3)){
-                                    for (const element of document.getElementsByName(eval(day[k] + i + "K"))) {
-                                        element.checked = false;
+            for (let k = 0; k < day.length; k++){
+                if (!(day[k] == "mon" && i == 3)){
+                    if (!(day[k] == "tue" && i == 4)){
+                        if (!(day[k] == "tue" && i == 5)){
+                            if (!(day[k] == "fri" && i == 1)){
+                                if (!(day[k] == "fri" && i == 2)){
+                                    if (!(day[k] == "fri" && i == 3)){
+                                        for (const element of document.getElementsByName(eval(day[k] + i + "K"))) {
+                                            element.checked = false;
+                                        }
                                     }
                                 }
                             }
@@ -1174,15 +1380,13 @@ function resetCheck () {
                     }
                 }
             }
-        }
-    }  
-}
+        }  
+    }
 
-window.onload = function() {
-
-    document.getElementById("time_table").style.display="none";
-    tanni()
-    hide()
-    reset()
-}
+    window.onload = function() {
+        document.getElementById("time_table").style.display="none";
+        tanni()
+        hide()
+        reset()
+    }
 </script>
