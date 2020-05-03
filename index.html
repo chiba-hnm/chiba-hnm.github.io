@@ -892,220 +892,224 @@
     </div>
     
     <style>
-    html {
-        margin:50px;
-    }
-    p {
-        font-size:20px;
-    }
-    .button {
-        display: inline-block;
-        max-width: 180px;
-        text-align: left;
-        border: 2px solid #9ec34b;
-        font-size: 16px;
-        color: #9ec34b;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 16px;
-        border-radius: 4px;
-        transition: .4s;
-    }
-    .button:hover {
-        background-color: #9ec34b;
-        border-color: #cbe585;
-        color: #FFF;
-    }
-    table {
-        table-layout: fixed;
-        border: 1px #000000 solid;
-    }
-    table tr td:nth-of-type(1){
-        background-color:#e5ffce;
-        border: 1px #000000 solid;
-    }
-    table tr td:nth-of-type(2),td:nth-of-type(3),td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6),td:nth-of-type(7){
-        border: 1px #000000 solid;
-        height: 70px;
-        background-color:white !important;
-        background-image: radial-gradient(rgb(248, 248, 248) 15%, transparent 16%),
-        radial-gradient(rgb(248, 248, 248) 15%, transparent 16%); 
-        background-size:30px 30px;  
-        background-position: 0 0, 15px 15px; 
-    }
-    table th {
-        height: 35px;
-        border: 1px #000000 solid;
-        font-weight: bold;
-        background:#e5ffce;
-    }
-    input[type=radio] {
-        display: none;
-    }
-    .radio {
-        box-sizing: border-box;
-        -webkit-transition: background-color 0.2s linear;
-        transition: background-color 0.2s linear;
-        position: relative;
-        display: inline-block;
-        margin: 0 20px 8px 0;
-        padding: 12px 12px 12px 42px;
-        border-radius: 8px;
-        background-color: #f6f7f8;
-        vertical-align: middle;
-        cursor: pointer;
-    }
-    .radio:hover {
-        background-color: #e2edd7;
-    }
-    .radio:hover:after {
-        border-color: #53b300;
-    }
-    .radio:after {
-        -webkit-transition: border-color 0.2s linear;
-        transition: border-color 0.2s linear;
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        display: block;
-        margin-top: -10px;
-        width: 16px;
-        height: 16px;
-        border: 2px solid #bbb;
-        border-radius: 6px;
-        content: '';
-    }
-    .radio:before {
-        -webkit-transition: opacity 0.2s linear;
-        transition: opacity 0.2s linear;
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        display: block;
-        margin-top: -5px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #53b300;
-        content: '';
-        opacity: 0;
-    }
-    input[type=radio]:checked + .radio:before {
-        opacity: 1;
-    }
-    .list39 {
-        width:50%;
-        position: relative;
-        margin: 3em 0 1em 0;
-        background: #fff6e6;
-        box-shadow: 0 2px 3px rgba(0,0,0,.22);
-    }
-    .list39-title {
-        font-size: 20px;
-        padding: 4px 0 4px 16px;
-        color: #ee8992;
-        font-weight:bold;
-    }
-    .list39:after {
-        position: absolute;
-        content: "";
-        top: 25px;
-        width: 30%;
-        height: 35px;
-        opacity: 0.8;
-        margin: -35px auto 10px 35%;
-        background-color: #ffeaea;
-        background-image:
-        linear-gradient(-45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%),
-        linear-gradient(45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%);
-        background-size: 35px 35px;
-        transform: rotate(-2deg);
-        left: 10px;
-        right: 10px;
-    }
-    .list39 ul,.list39 ol  {
-        position: relative;
-        margin: 0;
-        padding: 0 0.5em 0 0.5em;
-        color: #ee8992;
-        border: none;
-    list-style-type: none;
-    }
-    .list39 ol {
-        counter-reset: number;
-    }
-    .list39 ul li,.list39 ol li {
-        line-height: 1.5;
-        padding: 0.5em 0 0.5em 1.6em;
-        border-bottom: dashed 1px #ee8992;
-    }
-    .list39 ul li:before {
-        position: absolute;
-        font-family: FontAwesome;
-        content: "\f14a";
-        left : 0.7em;
-        color: #ee8992;
-    }
-    .list39 ol li:before {
-        display: inline-block;
-        position: absolute;
-        font-family: "Quicksand", sans-serif;
-        content: counter(number);
-        counter-increment: number;
-        left: 0.5em;
-        width: 22px;
-        height: 22px;
-        border-radius: 20%;
-        background: #ee8992;
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 22px;
-    }
-    .list39 ul li:last-of-type,.list39 ol li:last-of-type{
-        border-bottom: none;
-    }
-    a{
-        padding: 0 10px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 226, 152) 50%);
-        background-position: 0 0;
-        background-size: 200% auto;
-        transition: .3s;
-        text-decoration: none;
-        color:black;
-    }
-    a:hover{
-        background-position: -100% 0;
-        color: #fff;
-    }
-    .back {
-        font-size:40px;
-        text-align:center;
-        position: fixed;
-        width:220px;
-        height:80px;
-        bottom: 20px;
-        right: 20px;
-        padding-top:20px;
-        border:1px solid #888888;
-        background-color: rgb(194, 247, 125);
-        filter:alpha(opacity=85);
-        -moz-opacity:0.85;
-        -khtml-opacity: 0.85;
-        opacity:0.85;    
-        text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
-        -webkit-box-shadow: 1px 1px 2px #E7E7E7;
-        -moz-box-shadow: 1px 1px 2px #E7E7E7; 
-        -webkit-border-radius: 3px; 
-        -moz-border-radius: 3px;
-    }
+        html {
+            margin: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            max-width: 180px;
+            text-align: left;
+            border: 2px solid #9ec34b;
+            font-size: 16px;
+            color: #9ec34b;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: .4s;
+        }
+        .button:hover {
+            background-color: #9ec34b;
+            border-color: #cbe585;
+            color: #FFF;
+        }
+        table {
+            table-layout: fixed;
+            border: 1px #000000 solid;
+        }
+        table tr td:nth-of-type(1){
+            background-color:#e5ffce;
+            border: 1px #000000 solid;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        table tr td:nth-of-type(2),td:nth-of-type(3),td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6),td:nth-of-type(7){
+            border: 1px #000000 solid;
+            height: 70px;
+            background-color:white !important;
+            background-image: radial-gradient(rgb(248, 248, 248) 15%, transparent 16%),
+            radial-gradient(rgb(248, 248, 248) 15%, transparent 16%); 
+            background-size: 30px 30px;  
+            background-position: 0 0, 15px 15px; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        table th {
+            height: 35px;
+            border: 1px #000000 solid;
+            font-weight: bold;
+            background:#e5ffce;
+        }
+        input[type=radio] {
+            display: none;
+        }
+        .radio {
+            box-sizing: border-box;
+            -webkit-transition: background-color 0.2s linear;
+            transition: background-color 0.2s linear;
+            position: relative;
+            display: inline-block;
+            margin: 0 20px 8px 0;
+            padding: 12px 12px 12px 42px;
+            border-radius: 8px;
+            background-color: #f6f7f8;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .radio:hover {
+            background-color: #e2edd7;
+        }
+        .radio:hover:after {
+            border-color: #53b300;
+        }
+        .radio:after {
+            -webkit-transition: border-color 0.2s linear;
+            transition: border-color 0.2s linear;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            display: block;
+            margin-top: -10px;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+            content: '';
+        }
+        .radio:before {
+            -webkit-transition: opacity 0.2s linear;
+            transition: opacity 0.2s linear;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            display: block;
+            margin-top: -5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #53b300;
+            content: '';
+            opacity: 0;
+        }
+        input[type=radio]:checked + .radio:before {
+            opacity: 1;
+        }
+        .list39 {
+            width: 50%;
+            position: relative;
+            margin: 3em 0 1em 0;
+            background: #fff6e6;
+            box-shadow: 0 2px 3px rgba(0,0,0,.22);
+        }
+        .list39-title {
+            font-size: 20px;
+            padding: 4px 0 4px 16px;
+            color: #ee8992;
+            font-weight:bold;
+        }
+        .list39:after {
+            position: absolute;
+            content: "";
+            top: 25px;
+            width: 30%;
+            height: 35px;
+            opacity: 0.8;
+            margin: -35px auto 10px 35%;
+            background-color: #ffeaea;
+            background-image:
+            linear-gradient(-45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%),
+            linear-gradient(45deg, rgba(255,188,188,.5) 25%, transparent 25%, transparent 50%, rgba(255,188,188,.5) 50%, rgba(255,188,188,.5) 75%, transparent 75%, transparent 100%);
+            background-size: 35px 35px;
+            transform: rotate(-2deg);
+            left: 10px;
+            right: 10px;
+        }
+        .list39 ul,.list39 ol  {
+            position: relative;
+            margin: 0;
+            padding: 0 0.5em 0 0.5em;
+            color: #ee8992;
+            border: none;
+        list-style-type: none;
+        }
+        .list39 ol {
+            counter-reset: number;
+        }
+        .list39 ul li,.list39 ol li {
+            line-height: 1.5;
+            padding: 0.5em 0 0.5em 1.6em;
+            border-bottom: dashed 1px #ee8992;
+        }
+        .list39 ul li:before {
+            position: absolute;
+            font-family: FontAwesome;
+            content: "\f14a";
+            left : 0.7em;
+            color: #ee8992;
+        }
+        .list39 ol li:before {
+            display: inline-block;
+            position: absolute;
+            font-family: "Quicksand", sans-serif;
+            content: counter(number);
+            counter-increment: number;
+            left: 0.5em;
+            width: 22px;
+            height: 22px;
+            border-radius: 20%;
+            background: #ee8992;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 22px;
+        }
+        .list39 ul li:last-of-type,.list39 ol li:last-of-type{
+            border-bottom: none;
+        }
+        a{
+            padding: 0 10px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 226, 152) 50%);
+            background-position: 0 0;
+            background-size: 200% auto;
+            transition: .3s;
+            text-decoration: none;
+            color:black;
+        }
+        a:hover{
+            background-position: -100% 0;
+            color: #fff;
+        }
+        .back {
+            font-size: 40px;
+            text-align: center;
+            position: fixed;
+            width: 220px;
+            height: 80px;
+            bottom: 30px;
+            right: 40px;
+            padding-top: 20px;
+            border:1px solid #888888;
+            background-color: rgb(194, 247, 125);
+            filter:alpha(opacity=85);
+            -moz-opacity: 0.85;
+            -khtml-opacity: 0.85;
+            opacity: 0.85;    
+            text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 1px 0 1px #aaa; 
+            -webkit-box-shadow: 1px 1px 2px #E7E7E7;
+            -moz-box-shadow: 1px 1px 2px #E7E7E7; 
+            -webkit-border-radius: 3px; 
+            -moz-border-radius: 3px;
+        }
     </style>
 </html>
 
 <script>
-    
+
     function radioDeselection() {
         document.getElementById("time_table").style.display="none";
         for (const element of document.getElementsByName('select_class')) {
