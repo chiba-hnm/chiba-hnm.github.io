@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>portfolio</title>
 </head>
@@ -12,7 +13,10 @@
 
 <!-- header -->
 <header>
-  <img src="./img/logo.png" class="headline">
+
+  <a href="#home">
+    <img src="./img/logo.png" class="headline">
+  </a>
   <ul class="nav-list">
     <li class="nav-list-item">
       <a href="#home">Home</a>
@@ -26,6 +30,10 @@
     <li class="nav-list-item">
       <a href="#work">Work</a>
     </li>
+    <li class="nav-list-item">
+      <a href="#accounts">Accounts</a>
+    </li>
+
   </ul>
 </header>
 
@@ -261,7 +269,7 @@
         <!-- <div>"Bootstrap", "Bulma" 使用経験あり</div>        -->
       </div>
     </div>
-    <div class="content">
+    <div class="content end">
       <p style="width:100%; text-align:center;">そのほか</p>
       <div class="box">
         <div class="title">docker</div>
@@ -367,90 +375,101 @@
         <label for="trigger" class="close_button">✖️</label>
 
         <div class="work1">
+          <h2>オープンキャンパスサイト</h2>
           <div class="work-left">
-            <h2>オープンキャンパスサイト</h2>
-             <br>
-            <h1>準備中</h1>
-            <br>
-            <p>今年度のオンラインオープンキャンパス用に作成したサイトのプロトタイプ→ <a href="https://chiba-hnm.github.io/OC/home.html" target="blank">https://chiba-hnm.github.io/OC/home.html</a></p>
+            <h3>概要</h3>
+            <p>今年度のオンラインオープンキャンパス用に作成したサイトのプロトタイプです。<br>2週間ほどで作成しました。<br><br>
+              サイトページ → <a href="https://chiba-hnm.github.io/OC/home.html" target="blank">こちら</a>
+            </p>
+            <h3>使用言語など</h3>
+            <p>HTML　CSS　JavaScript</p>
           </div>
           <div class="work-right">
-            <!-- <iframe src="https://chiba-hnm.github.io" width="100%" height="100%"></iframe> -->
+            <img width="100%;" src="img/OCsite.png">
           </div>
         </div>
         <div class="work2">
+          <h2>履修相談用サイト</h2>
           <div class="work-left">
-            <h2>履修相談用サイト</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p>今年度のオンライン履修相談会用に作成したサイト→ <a href="https://chiba-hnm.github.io" target="blank">https://chiba-hnm.github.io</a></p>
+            <h3>概要</h3>
+            <p>今年度の学部の新入生向けに作成した履修相談会用サイトです。<br>2日ほどで作成しました。<br>
+              単位数がカウントされるようにした点と自分の空きコマ、空きコマに取れる科目とそのシラバスを同時に確認できるようにした点を工夫しました。<br><br>
+              サイトページ → <a href="https://chiba-hnm.github.io/" target="blank">こちら</a>
+            </p>
+            <h3>使用言語など</h3>
+            <p>HTML　CSS　JavaScript</p>
           </div>
           <div class="work-right">
-            <!-- <img src="img/アバター.gif" width="100%"> -->
+            <img width="100%;" src="img/risyuu.png">
           </div>
         </div>
         <div class="work3">
+          <h2>PHPでマッチングサイト</h2>
           <div class="work-left">
-            <h2>PHPでマッチングサイト</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>授業でHTML, CSS, PHPを用いてマッチングサービスの開発を行いました。<br>
+              データベースはMySQLを使用してCRUD機能を備えました。<br>開発期間は半年ほどです。</p>
+            <h3>使用言語など</h3>
+            <p>HTML　CSS　PHP　MySQL</p>
           </div>
           <div class="work-right">
-            <!-- <img src="img/アバター.gif" width="100%"> -->
-          </div>
+            <iframe src="https://drive.google.com/file/d/15LpvqGPzePzMy5tN1Y61KyHuoNBpm1Ow/preview" width="45%"
+              height="50%"></iframe>
+            <iframe src="https://drive.google.com/file/d/13EL5XLyiA_eizhjTu4bH9zSDd4hswJew/preview" width="45%"
+              height="50%"></iframe>
+            <iframe src="https://drive.google.com/file/d/1TLC7vpkxDFqEuO7Z9tmJXt8HLcuk_tXt/preview" width="45%"
+              height="50%"></iframe> </div>
         </div>
         <div class="work4">
+          <h2>Vue.jsでアバター作成</h2>
           <div class="work-left">
-            <h2>Vue.jsでアバター作成</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>Vue.jsとCodeSandboxでアバター(のようなもの)が作成できるツールを作成しました。<br><br>
+              Qiita記事 → <a href="https://qiita.com/chiba___/items/e8c11292f88fc5f4b749" target="blank">こちら</a><br>
+              Demoページ → <a href="https://jysze.csb.app/" target="blank">こちら</a></p>
+            <h3>使用言語など</h3>
+            <p>Vue.js</p>
           </div>
           <div class="work-right">
             <img src="img/avatar.gif" width="100%">
           </div>
         </div>
         <div class="work5">
+          <h2>Vue.jsとCodeSandboxでトリミング機能の実装</h2>
           <div class="work-left">
-            <h2>Vue.jsとCodeSandboxでトリミング機能の実装</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>CodeSandboxとvue-cropperjsを使用してVue.jsで簡単なトリミング機能を作成しました。<br><br>
+              Qiita記事 → <a href="https://qiita.com/chiba___/items/bf1a09b9b730bfbf31f7" target="blank">こちら</a><br>
+              Demoページ → <a href="https://64c99.codesandbox.io/" target="blank">こちら</a></p>
+            <h3>使用言語など</h3>
+            <p>Vue.js</p>
           </div>
           <div class="work-right">
             <img src="img/trim.gif" width="100%">
           </div>
         </div>
         <div class="work6">
+          <h2>VB.NETで百人一首ゲーム</h2>
           <div class="work-left">
-            <h2>VB.NETで百人一首ゲーム</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>VB.NETで百人一首ゲームを作成しました。<br>間違えた札を選択するとその札にバツ印がつき、正しい選択肢を選択するまで続きます。正解したら、その札の決まり字、覚え方、意味が表示されます。<br>
+              初めてプログラミングを学んだ際に制作したもので、制作期間は3週間ほどです。
+            </p>
+            <h3>使用言語など</h3>
+            <p>VB.NET</p>
           </div>
           <div class="work-right">
-            <iframe src="https://drive.google.com/file/d/11SCDrRuOWgIYoelgdhXVklaOaoewaEN_/preview" width="100%" height="100%"></iframe>
-                    </div>
+            <iframe src="https://drive.google.com/file/d/11SCDrRuOWgIYoelgdhXVklaOaoewaEN_/preview" width="100%"
+              height="100%"></iframe>
+          </div>
         </div>
         <div class="work7">
+          <h2>OpenCVで飛び出す歌人</h2>
           <div class="work-left">
-            <h2>OpenCVで飛び出す歌人</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>PythonとOpenCVのテンプレートマッチングを使用して、カメラにかざした札の歌人をリアルタイムで札の上に表示させました。</p>
+            <h3>使用言語など</h3>
+            <p>Python　OpenCV</p>
           </div>
           <div class="work-right">
             <iframe src="https://drive.google.com/file/d/1NXZ8FlMdczq7CjrNCPCuxQ1YzlvUokon/preview" width="100%"
@@ -458,33 +477,49 @@
           </div>
         </div>
         <div class="work8">
+          <h2>JAVA＋なのぼ〜どAGでピクトを救出</h2>
           <div class="work-left">
-            <h2>JAVA＋なのぼ〜どAGでピクトを救出</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>JAVAとなのぼ〜どAGでクレーンゲームを作成しました。<br>スイッチや光センサーを利用してクレーンを動かしています。<br>
+              クレーンゲームの取り出し口に抵抗端子が貼り付けてあり、ピクトにアルミホイルが貼ってあるため、その二つが触れた時にGET判定としています。</p>
+            <h3>使用言語など</h3>
+            <p>JAVA　Processing　なのぼ〜どAG　モーター</p>
           </div>
           <div class="work-right">
-            <!-- <img src="img/アバター.gif" width="100%"> -->
+            <iframe src="https://drive.google.com/file/d/1xnw2ElGSBOXycYr5I943XZO1lRgkOW_F/preview" width="100%"
+              height="100%"></iframe>
           </div>
         </div>
         <div class="work9">
+          <h2>GAS＋Leap Motionでアンケート</h2>
           <div class="work-left">
-            <h2>GAS＋Leap Motionでアンケート</h2>
-            <br>
-            <h1>準備中</h1>
-            <br>
-
-            <p></p>
+            <h3>概要</h3>
+            <p>Google Apps Scriptでアンケートページを作り、Leap Motionで動かせるようにしました。<br>
+              アンケート結果はスプレッドシートに保存されるようになっています。</p>
+            <h3>使用言語など</h3>
+            <p>GAS(Google Apps Script)　Leap Motion</p>
           </div>
           <div class="work-right">
-            <!-- <img src="img/アバター.gif" width="100%"> -->
-          </div>
+            <iframe src="https://drive.google.com/file/d/1wL3azms8pvd42czK51Piphc4DvElgHPv/preview" width="100%"
+              height="100%"></iframe> </div>
         </div>
       </div>
     </div>
+    <div class="accounts" id="accounts">
+      <div class="title">
+        <p>Accounts</p>
+      </div>
+      <div class="contents" style="width: 100%; text-align: center;">
+        Qiita 　・・・ 　 <a href="https://qiita.com/chiba___" class="cp_link" target="blank">
+          <span data-text="https://qiita.com/chiba___">https://qiita.com/chiba___</span>
+        </a>　<br>
+        GitHub ・・・ <a href="https://github.com/chiba-hnm" class="cp_link" target="blank">
+          <span data-text="https://github.com/chiba-hnm">https://github.com/chiba-hnm</span>
+        </a>
+      </div>
+
+    </div>
+
   </div>
 
 
@@ -528,6 +563,7 @@
     line-height: 100px;
     float: right;
     margin-left: 30px;
+    margin-right: 30px;
     list-style: none;
   }
 
@@ -535,6 +571,12 @@
     list-style: none;
     display: inline-block;
     margin: 0 20px;
+  }
+
+  .nav-list-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
   }
 
   .home {
@@ -679,7 +721,6 @@
     font-size: 60px;
     width: 200px;
     line-height: 120%;
-    ;
     text-align: center;
     background: -webkit-linear-gradient(0deg, #FF8AD8, #73FDFF, #FFFC79, #73FA79, #d783FF);
     -webkit-background-clip: text;
@@ -789,12 +830,16 @@
     font-size: 35px;
   }
 
+  .skill .content p {
+    margin-top: 50px;
+  }
+
   .skill .box {
     font-size: 16px;
 
     width: 300px;
     height: 200px;
-    margin: 20px;
+    margin: 30px 20px 40px 20px;
     background-color: antiquewhite;
     text-align: center;
     border-radius: 30px;
@@ -804,6 +849,11 @@
     margin: 20px 0 10px 0;
     font-size: 30px;
   }
+
+  .skill .end {
+    margin-bottom: 50px;
+  }
+
 
   .work .box {
     font-size: 16px;
@@ -821,6 +871,7 @@
   .work .box:hover {
     transform: scale(1.1, 1.1);
     transition-duration: 0.3s;
+    cursor: pointer;
   }
 
   .work .box img {
@@ -837,7 +888,18 @@
     width: 400px;
     height: 300px;
     float: left;
+    margin-top: 10px;
   }
+
+  .work-left h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .work-left a {
+    color: #fdb8b6;
+  }
+
 
   .work-right {
     height: 300px;
@@ -1191,6 +1253,89 @@
 
   .modal_wrap input:checked~.modal_overlay .modal_content {
     transform: scale(1) rotateX(0deg);
+  }
+
+  .accounts {
+    font-family: 'MuseoModerno', cursive;
+    line-height: 150%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: calc(100vh - 120px);
+    justify-content: center;
+    /*左右中央揃え*/
+    align-items: center;
+    /*上下中央揃え*/
+    color: white;
+    font-size: 30px;
+  }
+
+  .accounts .title {
+    width: 100%;
+    height: 0px;
+  }
+
+  .accounts .title p {
+    margin: auto;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 60px;
+    width: 260px;
+    line-height: 120%;
+    text-align: center;
+    background: -webkit-linear-gradient(0deg, #FF8AD8, #73FDFF, #FFFC79, #73FA79, #d783FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #FFF;
+    text-stroke: 1px #FFF;
+
+  }
+
+  .cp_link {
+    display: inline-block;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+
+  .cp_link {
+    display: inline-block;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+
+  .cp_link span {
+    display: inline-block;
+    position: relative;
+    padding: 0.1em 0.3em;
+    transition: .4s;
+    transform-origin: 50% 0%;
+    transform-style: preserve-3d;
+    color: white;
+
+  }
+
+  .cp_link span:after {
+    display: inline-block;
+    position: absolute;
+    padding: 0.1em 0.3em;
+    left: 0;
+    top: 0;
+    content: attr(data-text);
+    color: #fff;
+    background: -webkit-linear-gradient(0deg, #FF8AD8, #73FDFF, #FFFC79, #73FA79, #d783FF);
+    transform-origin: 50% 0%;
+    transform: translate3d(0, 105%, 0) rotateX(-90deg);
+    color: black;
+  }
+
+  .cp_link:hover span {
+    background: -webkit-linear-gradient(0deg, #FF8AD8, #73FDFF, #FFFC79, #73FA79, #d783FF);
+    transform: translate3d(0, 0, -30px) rotateX(90deg);
+    color: black;
+
   }
 </style>
 
