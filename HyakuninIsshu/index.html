@@ -16,6 +16,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- アドレスバー等のブラウザのUIを非表示 -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- ホーム画面に表示されるアプリ名 -->
+        <meta name="HyakuninIsshu" content="TAP10">
+        <!-- ホーム画面に表示されるアプリアイコン -->
+        <link rel="apple-touch-icon" href="image/woman.png">
+        <!-- ウェブアプリマニフェストの読み込み -->
+        <link rel="manifest" href="manifest.json">
+        <!-- ServiceWorkerの登録 -->
+        <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+              .then((reg) => {
+                console.log('Service worker registered.', reg);
+              });
+        }
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
