@@ -1,12 +1,12 @@
 {
-  "name":"TAP10",
-  "short_name":"TAP10",
+  "name":"HyakuninIsshu",
+  "short_name":"HyakuninIsshu",
   "icons": [{
-      "src": "/woman.png",
+      "src": "assets/img/woman.png",
       "sizes":"192x192",
       "type": "image/png"
     }, {
-      "src": "/woman.png",
+      "src": "assets/img/woman.png",
       "sizes":"512x512",
       "type": "image/png"
     }],
