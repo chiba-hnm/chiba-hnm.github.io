@@ -1,27 +1,24 @@
-// キャッシュファイルの指定
-var CACHE_NAME = 'pwa-sample-caches';
-var urlsToCache = [
-    '/chiba-hnm.github.io/HyakuninIsshu/',
+const STATIC_DATA = [
+  'index.html',
+  'css/styles.css',
+  'js/scripts.js'
 ];
 
-// インストール処理
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches
-            .open(CACHE_NAME)
-            .then(function(cache) {
-                return cache.addAll(urlsToCache);
-            })
-    );
+self.addEventListener('install', function(e) {
+ e.waitUntil(
+   caches.open('cache_v1').then(function(cache) {
+     return cache.addAll(STATIC_DATA);
+   })
+ );
 });
 
-// リソースフェッチ時のキャッシュロード処理
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches
-            .match(event.request)
-            .then(function(response) {
-                return response ? response : fetch(event.request);
-            })
-    );
+ console.log(event.request.url);
+
+ event.respondWith(
+   caches.match(event.request).then(function(response) {
+     return response || fetch(event.request);
+   })
+ );
 });
+
