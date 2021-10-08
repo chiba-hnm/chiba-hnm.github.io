@@ -7,6 +7,11 @@ body {
     background-attachment: fixed;         /* 固定 */
     background-position: center center;   /* 縦横中央 */
 }
+@media screen and (min-width: 2000px) {
+    body {
+        background-image: url("https://github.com/chiba-hnm/chiba-hnm.github.io/blob/master/FateNumber/background2.png?raw=true"); /* 画像 */
+    }
+}
 h1 {
     text-align: center;
     margin-top: 200px;
