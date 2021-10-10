@@ -2,14 +2,14 @@
 body {
     font-family: 'Hachi Maru Pop', cursive;
     background-color: #486d46;            /* 背景色 */
-    background-image: url("https://github.com/chiba-hnm/chiba-hnm.github.io/blob/master/FateNumber/background.png?raw=true"); /* 画像 */
+    background-image: url("background.png"); /* 画像 */
     background-size: cover;               /* 全画面 */
     background-attachment: fixed;         /* 固定 */
     background-position: center center;   /* 縦横中央 */
 }
 @media screen and (min-width: 1200px) {
     body {
-        background-image: url("https://github.com/chiba-hnm/chiba-hnm.github.io/blob/master/FateNumber/background2.png?raw=true"); /* 画像 */
+        background-image: url("background2.png"); /* 画像 */
     }
 }
 h1 {
@@ -90,4 +90,8 @@ select {
     text-align: center;
     margin-top: 50px;
     display:none;
+  }
+
+  #result {
+      margin-bottom:50px;
   }
