@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Hachi Maru Pop', cursive;
-    background-color: #486d46;            /* 背景色 */
+    background-color: #FFA9D2;            /* 背景色 */
     background-image: url("background.png"); /* 画像 */
     background-size: cover;               /* 全画面 */
     background-attachment: fixed;         /* 固定 */
@@ -135,5 +135,5 @@ select {
 	height: 30px;
 	margin-top: -10px;
 	border-radius: 50%;
-	background: #FFC9D2;
+	background: #FFA9D2;
 }
