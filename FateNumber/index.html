@@ -7,10 +7,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
+    <h1>グループを選択してください</h1>
+    <div class="sample">
+        <input type="radio" name="s4" id="select1" value="1" onchange="radio()">
+        <label for="select1">1</label>
+        <input type="radio" name="s4" id="select2" value="2" onchange="radio()">
+        <label for="select2">2</label>
+    </div>
+
     <h1>誕生日を選択してください</h1>
     <div class="birthday">
         <select name="month">
@@ -100,6 +108,67 @@
         <div name="image" id="img10" class="img-style">
             <img src="10.png">
         </div>
+        <div id="img11" class="img-style">
+            <img src="11.png">
+        </div>
+        <div id="img12" class="img-style">
+            <img src="12.png">
+        </div>
+        <div id="img13" class="img-style">
+            <img src="13.png">
+        </div>
+        <div id="img14" class="img-style">
+            <img src="14.png">
+        </div>
+        <div id="img15" class="img-style">
+            <img src="15.png">
+        </div>
+        <div id="img16" class="img-style">
+            <img src="16.png">
+        </div>
+        <div id="img17" class="img-style">
+            <img src="17.png">
+        </div>
+        <div id="img18" class="img-style">
+            <img src="18.png">
+        </div>
+        <div id="img19" class="img-style">
+            <img src="19.png">
+        </div>
+        <div id="img20" class="img-style">
+            <img src="20.png">
+        </div>
+        <div id="img21" class="img-style">
+            <img src="21.png">
+        </div>
+        <div id="img22" class="img-style">
+            <img src="22.png">
+        </div>
+        <div id="img23" class="img-style">
+            <img src="23.png">
+        </div>
+        <div id="img24" class="img-style">
+            <img src="24.png">
+        </div>
+        <div id="img25" class="img-style">
+            <img src="25.png">
+        </div>
+        <div id="img26" class="img-style">
+            <img src="26.png">
+        </div>
+        <div id="img27" class="img-style">
+            <img src="27.png">
+        </div>
+        <div id="img28" class="img-style">
+            <img src="28.png">
+        </div>
+        <div id="img29" class="img-style">
+            <img src="29.png">
+        </div>
+        <div id="img30" class="img-style">
+            <img src="30.png">
+        </div>
+
     </div>
     <!-- <div id="img11" class="img-style">
         <img src="11.png">
@@ -199,25 +268,41 @@
 
 <script>
     document.getElementById("fate-button").style.display = "none";
-    let month = 0
-    let day = 0
+    let checkValue = 0;
+    let month = 0;
+    let day = 0;
+
+    function radio() {
+        let elements = document.getElementsByName('s4');
+        let len = elements.length;
+        for (let i = 0; i < len; i++) {
+            if (elements.item(i).checked) {
+                checkValue = elements.item(i).value;
+                console.log(checkValue)
+            }
+        }
+        if (checkValue != 0 && month != 0 && day != 0) {
+            document.getElementById("fate-button").style.display = "block";
+        }
+    }
     let select_month = document.querySelector('[name="month"]');
     let select_day = document.querySelector('[name="day"]');
-    select_month.onchange = event => { 
+
+    select_month.onchange = event => {
         month = select_month.selectedIndex
         console.log(select_month.selectedIndex);
-        if (month != 0 && day != 0) {
+        if (checkValue != 0 && month != 0 && day != 0) {
             document.getElementById("fate-button").style.display = "block";
         }
     }
-    select_day.onchange = event => { 
+    select_day.onchange = event => {
         day = select_day.selectedIndex
         console.log(select_month.selectedIndex);
-        if (month != 0 && day != 0) {
+        if (checkValue != 0 && month != 0 && day != 0) {
             document.getElementById("fate-button").style.display = "block";
         }
     }
-    document.getElementById("button").onclick = function() {
+    document.getElementById("button").onclick = function () {
         document.getElementById("img01").style.display = "none";
         document.getElementById("img02").style.display = "none";
         document.getElementById("img03").style.display = "none";
@@ -228,26 +313,26 @@
         document.getElementById("img08").style.display = "none";
         document.getElementById("img09").style.display = "none";
         document.getElementById("img10").style.display = "none";
-        // document.getElementById("img11").style.display = "none";
-        // document.getElementById("img12").style.display = "none";
-        // document.getElementById("img13").style.display = "none";
-        // document.getElementById("img14").style.display = "none";
-        // document.getElementById("img15").style.display = "none";
-        // document.getElementById("img16").style.display = "none";
-        // document.getElementById("img17").style.display = "none";
-        // document.getElementById("img18").style.display = "none";
-        // document.getElementById("img19").style.display = "none";
-        // document.getElementById("img20").style.display = "none";
-        // document.getElementById("img21").style.display = "none";
-        // document.getElementById("img22").style.display = "none";
-        // document.getElementById("img23").style.display = "none";
-        // document.getElementById("img24").style.display = "none";
-        // document.getElementById("img25").style.display = "none";
-        // document.getElementById("img26").style.display = "none";
-        // document.getElementById("img27").style.display = "none";
-        // document.getElementById("img28").style.display = "none";
-        // document.getElementById("img29").style.display = "none";
-        // document.getElementById("img30").style.display = "none";
+        document.getElementById("img11").style.display = "none";
+        document.getElementById("img12").style.display = "none";
+        document.getElementById("img13").style.display = "none";
+        document.getElementById("img14").style.display = "none";
+        document.getElementById("img15").style.display = "none";
+        document.getElementById("img16").style.display = "none";
+        document.getElementById("img17").style.display = "none";
+        document.getElementById("img18").style.display = "none";
+        document.getElementById("img19").style.display = "none";
+        document.getElementById("img20").style.display = "none";
+        document.getElementById("img21").style.display = "none";
+        document.getElementById("img22").style.display = "none";
+        document.getElementById("img23").style.display = "none";
+        document.getElementById("img24").style.display = "none";
+        document.getElementById("img25").style.display = "none";
+        document.getElementById("img26").style.display = "none";
+        document.getElementById("img27").style.display = "none";
+        document.getElementById("img28").style.display = "none";
+        document.getElementById("img29").style.display = "none";
+        document.getElementById("img30").style.display = "none";
         // document.getElementById("img31").style.display = "none";
         // document.getElementById("img32").style.display = "none";
         // document.getElementById("img33").style.display = "none";
@@ -259,29 +344,74 @@
         // document.getElementById("img39").style.display = "none";
         // document.getElementById("img40").style.display = "none";
 
-        if (month == 1) {
-            document.getElementById("img01").style.display = "block";
-        } else if (month == 2){
-            document.getElementById("img02").style.display = "block";
-        } else if (month == 3){
-            document.getElementById("img03").style.display = "block";
-        } else if (month == 4){
-            document.getElementById("img04").style.display = "block";
-        } else if (month == 5){
-            document.getElementById("img05").style.display = "block";
-        } else if (month == 6){
-            document.getElementById("img06").style.display = "block";
-        } else if (month == 7){
-            document.getElementById("img07").style.display = "block";
-        } else if (month == 8){
-            document.getElementById("img08").style.display = "block";
-        } else if (month == 9){
-            document.getElementById("img09").style.display = "block";
+
+        if (checkValue == 1) {
+            if (month == 3 && day == 16) {
+                document.getElementById("img04").style.display = "block";
+            } else if (month == 5 && day == 23) {
+                document.getElementById("img13").style.display = "block";
+            } else if (month == 6 && day == 9) {
+                document.getElementById("img01").style.display = "block";
+            } else if (month == 6 && day == 18) {
+                document.getElementById("img10").style.display = "block";
+            } else if (month == 7 && day == 18) {
+                document.getElementById("img05").style.display = "block";
+            } else if (month == 8 && day == 21) {
+                document.getElementById("img09").style.display = "block";
+            } else if (month == 9 && day == 7) {
+                document.getElementById("img06").style.display = "block";
+            } else if (month == 9 && day == 26) {
+                document.getElementById("img03").style.display = "block";
+            } else if (month == 10 && day == 9) {
+                document.getElementById("img02").style.display = "block";
+            } else if (month == 10 && day == 14) {
+                document.getElementById("img12").style.display = "block";
+            } else if (month == 12 && day == 2) {
+                document.getElementById("img08").style.display = "block";
+            } else if (month == 12 && day == 8) {
+                document.getElementById("img07").style.display = "block";
+            } else if (month == 12 && day == 14) {
+                document.getElementById("img11").style.display = "block";
+            } else {
+                document.getElementById("img30").style.display = "block";
+            }
+        } else if (checkValue == 2) {
+            if (month == 1 && day == 1) {
+                document.getElementById("img21").style.display = "block";
+            } else if (month == 2 && day == 8) {
+                document.getElementById("img19").style.display = "block";
+            } else if (month == 2 && day == 16) {
+                document.getElementById("img26").style.display = "block";
+            } else if (month == 3 && day == 13) {
+                document.getElementById("img28").style.display = "block";
+            } else if (month == 3 && day == 24) {
+                document.getElementById("img27").style.display = "block";
+            } else if (month == 4 && day == 1) {
+                document.getElementById("img23").style.display = "block";
+            } else if (month == 4 && day == 18) {
+                document.getElementById("img24").style.display = "block";
+            } else if (month == 4 && day == 26) {
+                document.getElementById("img25").style.display = "block";
+            } else if (month == 5 && day == 10) {
+                document.getElementById("img15").style.display = "block";
+            } else if (month == 8 && day == 31) {
+                document.getElementById("img18").style.display = "block";
+            } else if (month == 9 && day == 12) {
+                document.getElementById("img14").style.display = "block";
+            } else if (month == 9 && day == 26) {
+                document.getElementById("img17").style.display = "block";
+            } else if (month == 11 && day == 30) {
+                document.getElementById("img22").style.display = "block";
+            } else if (month == 12 && day == 7) {
+                document.getElementById("img20").style.display = "block";
+            } else if (month == 12 && day == 28) {
+                document.getElementById("img16").style.display = "block";
+            } else {
+                document.getElementById("img30").style.display = "block";
+            }
         } else {
-            document.getElementById("img10").style.display = "block";
+            document.getElementById("img30").style.display = "block";
         }
-
-
     };
-    
+
 </script>
